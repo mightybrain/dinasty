@@ -1,0 +1,115 @@
+.branches
+    width calc(100% - 78px)
+    max-width 1440px
+    margin 0 auto
+    padding 90px 0 92px 0
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
+
+    &__heading
+        display block
+        margin 0 0 36px 0
+        text-align center
+
+    &__list
+        display flex
+        flex-direction column
+        margin 0
+        padding 0
+        list-style none
+
+.branches__item.js-content-is-hidden
+    display none
+
+.branch
+    width 100%
+
+    &__top
+        display flex
+        flex-wrap nowrap
+        flex-direction row-reverse
+        justify-content space-between
+        margin 60px 0 43px 0
+        @media tablet-portrait-small
+            flex-direction column
+
+    &__image-wrapper
+        position relative
+        width calc(100% / 3 - 36px / 1.5)
+        height 335px
+        border-radius 10px
+        overflow hidden
+        @media laptop
+            width calc(100% / 3 - 32px / 1.5)
+        @media tablet-portrait-large
+            width calc(50% - 16px)
+        @media tablet-portrait-small
+            width 100%
+        @media phone
+            height 220px
+
+    &__image
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width 101%
+        height 101%
+        object-fit cover
+
+    &__map-wrapper
+        width 100%
+        height 335px
+        border-radius 10px
+        overflow hidden
+
+    &__map
+        height 100%
+
+    &__bottom
+        display flex
+        flex-wrap nowrap
+        justify-content space-between
+        @media tablet-portrait-large
+            flex-direction column-reverse
+
+    &__col
+        &:first-child
+            width calc(100% / 3 - 36px / 1.5)
+            @media laptop
+                width calc(100% / 3 - 32px / 1.5)
+            @media tablet-portrait-large
+                width 100%
+                margin 18px 0 0 0
+            
+        &:last-child
+            width calc(100% / 1.5 - 36px / 3)
+            @media laptop
+                width calc(100% / 1.5 - 32px / 3)
+            @media tablet-portrait-large
+                width 100%
+
+    &__opening-sign
+        display inline-block
+        margin 7px 0 0 0
+        padding 4px 15px 2px 15px
+        font-family "Spectral"
+        font-size 14px
+        line-height 18px
+        font-weight 300
+        color white
+        border-radius 14px
+        background-color green
+
+.branch__image-wrapper + .branch__map-wrapper
+    width calc(100% / 1.5 - 36px / 3)
+    @media laptop
+        width calc(100% / 1.5 - 32px / 3)
+    @media tablet-portrait-large
+        width calc(50% - 16px)
+    @media tablet-portrait-small
+        width 100%
+        margin 20px 0 0 0
+            

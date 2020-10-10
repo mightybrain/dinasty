@@ -1,0 +1,39 @@
+@font-face
+    font-family: "Spectral"
+    src: url("../fonts/spectral-regular.woff2") format("woff2")
+    font-weight: 300
+    font-style: normal
+
+
+
+@import "helpers/vars.styl"
+@import "partials/common.styl"
+@import "partials/animations.styl"
+
+
+
+body
+    display flex
+    flex-direction column
+    min-height 100vh
+
+    &.js-burger-menu-is-open
+        overflow hidden
+
+.main
+    flex-grow 1
+    overflow-x hidden
+
+
+
+@import "partials/header.styl"
+@import "partials/main-slider.styl"
+@import "partials/search.styl"
+@import "partials/form.styl"
+@import "partials/tabs.styl"
+@import "partials/services.styl"
+@import "partials/company.styl"
+@import "partials/news.styl"
+@import "partials/reviews.styl"
+@import "partials/branches.styl"
+@import "partials/footer.styl"

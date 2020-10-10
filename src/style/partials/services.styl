@@ -1,0 +1,71 @@
+.services
+    width calc(100% - 78px)
+    max-width 1440px
+    margin 0 auto
+    padding 89px 0 103px 0
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
+
+    &__heading
+        display block
+        margin 0 0 37px 0
+        text-align center
+        @media phone
+            text-align left
+
+    &__container
+        margin 68px 0 0 0
+
+    &__list
+        display grid
+        grid-template-columns 1fr 1fr 1fr 1fr
+        grid-template-rows auto
+        grid-gap 36px
+        margin 0
+        padding 0
+        list-style none
+        @media laptop
+            grid-gap 32px
+        @media tablet-portrait-large
+            grid-template-columns 1fr 1fr 1fr
+        @media tablet-portrait-medium
+            grid-template-columns 1fr 1fr
+        @media tablet-portrait-small
+            grid-column-gap 20px
+            grid-row-gap 32px
+        @media phone
+            grid-template-columns 1fr         
+
+    &__item
+        position relative
+        display flex
+        align-items center
+        box-sizing border-box
+        padding 0 0 0 60px
+
+    &__icon
+        position absolute
+        left 0px
+        top 50%
+        transform translateY(-50%)
+        display block
+        width 44px
+        height 44px
+
+    &__link
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        text-decoration none
+        transition .3s 0s ease
+
+        &:hover
+            color bright-pink
+
+.services__list.js-content-is-hidden
+    display none
+

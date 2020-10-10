@@ -1,0 +1,42 @@
+header.head
+    div.logo
+        //a.logo__link(href="")
+        img.logo__image(src="images/logo.png", alt="")
+    aside.head__aside
+        div.head__rows
+            div.head__row.head__row--top
+                button.head__button.head__button--no-backing
+                    svg(width="15" height="15")
+                        use(xlink:href="#cabinet-icon")
+                    |Личный кабинет
+                a.head__phone(href="tel:")
+                    |+7 343 363 74 09
+                button.head__button
+                    |Записаться на прием
+            div.head__row
+                nav.menu.head__menu
+                    ul.menu__list
+                        li.menu__item.menu__item--active
+                            //a.menu__link(href="")
+                            |О нас
+                        li.menu__item
+                            a.menu__link(href="")
+                                |Услуги и цены
+                        li.menu__item
+                            a.menu__link(href="")
+                                |Специалисты
+                        li.menu__item
+                            a.menu__link(href="")
+                                |Отзывы
+                        li.menu__item
+                            a.menu__link(href="")
+                                |Пациентам
+                        li.menu__item
+                            a.menu__link(href="")
+                                |Контакты
+                        li.menu__item
+                            button.menu__button.menu__button--search
+                                svg(width="15" height="15")
+                                    use(xlink:href="#search-icon")
+    div.burger.head__burger
+        div.burger__stroke

@@ -1,0 +1,255 @@
+.foot
+    width calc(100% - 78px)
+    max-width 1440px
+    margin 0 auto
+    padding 0 0 40px 0
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
+
+    &__top
+        position relative
+        display flex
+        flex-wrap nowrap
+        box-sizing border-box
+        width calc(100% + 36px)
+        margin 0 0 0 -36px
+        padding 55px 50px 54px 50px
+        @media laptop
+            width calc(100% + 32px)
+            margin 0 0 0 -32px
+        @media tablet-landscape-medium
+            padding 40px
+        @media tablet-portrait-large
+            flex-direction column
+            width 100%
+            margin 0
+        @media tablet-portrait-small
+            padding 30px
+        @media phone
+            padding 20px
+
+        &::before
+            content ""
+            position absolute
+            right 0
+            top 0
+            z-index -1
+            display block
+            width calc(100% - 36px)
+            height 100%
+            background-color lightest-gray
+            border-radius 10px
+            @media laptop
+                width calc(100% - 32px)
+            @media tablet-portrait-large
+                width 100%
+
+    &__sitemap
+        margin 0 0 0 36px
+        @media laptop
+            margin 0 0 0 32px
+        @media tablet-portrait-large
+            margin 0
+
+    &__buttons
+        width calc(25% - 36px)
+        margin 0 0 0 36px
+        @media laptop
+            width calc(25% - 32px)
+            margin 0 0 0 32px
+        @media tablet-portrait-large
+            width 100%
+            margin 0 0 -19px 0
+
+        &-list
+            margin 0
+            padding 0
+            list-style none
+            @media tablet-portrait-large
+                display flex
+                flex-wrap wrap
+
+        &-item
+            @media tablet-portrait-large
+                margin 0 25px 19px 0 
+
+            &:not(:last-child)
+                margin 0 0 19px 0
+                @media tablet-portrait-large
+                    margin 0 25px 19px 0 
+
+    &__contacts
+        width calc(25% - 36px)
+        margin 0 0 0 36px
+        @media laptop
+            width calc(25% - 32px)
+            margin 0 0 0 32px
+        @media tablet-portrait-large
+            width 100%
+            margin 30px 0 0 0
+
+        &-list
+            margin 0
+            padding 0
+            list-style none
+
+        &-hint
+            font-family "Spectral"
+            font-size 18px
+            line-height 22px
+            font-weight 300
+            color gray
+
+        &-data
+            margin 2px 0 0 0
+            font-family "Spectral"
+            font-size 18px
+            line-height 26px
+            font-weight 300
+            color black
+
+    &__middle
+        margin 43px 0 0 0
+
+    &__info
+        display flex
+        flex-wrap nowrap
+        justify-content space-between
+        @media tablet-portrait-small
+            flex-direction column
+
+        & p:not([class])
+            margin 0
+            font-family "Spectral"
+            font-size 16px
+            line-height 24px
+            font-weight 300
+            color gray
+
+    &__col
+        width calc(50% - 18px)
+        @media laptop
+            width calc(50% - 16px)
+        @media tablet-portrait-small
+            width 100%
+
+    &__col + &__col
+        @media tablet-portrait-small
+            margin 18px 0 0 0
+
+    &__bottom
+        display flex
+        flex-wrap nowrap
+        align-items center
+        margin 38px 0 0 0
+        @media tablet-portrait-small
+            flex-direction column
+            align-items flex-start
+
+    &__copyright
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+
+    &__developer
+        margin 0 0 0 auto
+        @media tablet-portrait-small
+            margin 18px 0 0 0
+
+.sitemap
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    width calc(50% - 36px)
+    @media laptop
+        width calc(50% - 32px)
+    @media tablet-portrait-large
+        flex-direction column
+        width 100%
+
+    &__list
+        width calc(50% - 18px)
+        margin 0
+        padding 0
+        list-style none
+        @media tablet-portrait-large
+            display flex
+            flex-wrap wrap
+            width 100%
+
+    &__item
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        transition color .3s 0s ease
+        cursor default
+        @media tablet-portrait-large
+            margin 0 25px 19px 0
+
+        &:hover
+            color bright-pink
+
+        &:not(:last-child)
+            margin 0 0 19px 0
+            @media tablet-portrait-large
+                margin 0 25px 19px 0
+
+        &--active
+            color bright-pink
+
+    &__link
+        color inherit
+        text-decoration none
+        outline none
+        cursor pointer
+
+.social
+    &__list
+        display flex
+        flex-wrap nowrap
+        margin 0
+        padding 0
+        list-style none
+
+.developer
+    display flex
+    flex-wrap nowrap
+    align-items flex-start
+    width 283px
+    @media laptop
+        width 302px
+    @media tablet-landscape-large
+        width auto
+
+    &__link
+        font-family "Helvetica"
+        font-size 12px
+        line-height 15px
+        font-weight 800
+        color white
+        text-transform uppercase
+        text-decoration none
+        letter-spacing 2px
+        padding 3px 4px 3px 6px
+        border-radius 3px
+        background-color deep-pink
+        transition background-color .3s 0s ease
+
+        &:hover
+            background-color bright-pink
+
+    &__hint
+        margin-left 7px
+        font-family "helvetica"
+        font-size 9px
+        line-height 11px
+        font-weight 300
+        color gray
+        text-transform uppercase
+        letter-spacing 2px

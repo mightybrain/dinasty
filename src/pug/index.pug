@@ -1,0 +1,545 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            section.main-slider.swiper-container.js-main-slider
+                ul.main-slider__list.swiper-wrapper
+                    li.main-slider__item-wrapper.swiper-slide
+                        div.main-slider__item
+                            div.main-slider__image-wrapper
+                                img.main-slider__image(src="images/main-slider/main-slide-01.jpg", alt="")
+                            div.main-slider__info
+                                h1.main-slider__heading
+                                    |Сеть частных клиник «Династия»
+                                div.main-slider__description
+                                    p
+                                        |Предлагает медицинские услуги для всей семьи. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                a.common__link.common__link--backing.main-slider__link(href="")
+                                    |Подробнее
+                    li.main-slider__item-wrapper.swiper-slide
+                        div.main-slider__item
+                            div.main-slider__image-wrapper
+                                img.main-slider__image(src="images/main-slider/main-slide-01.jpg", alt="")
+                            div.main-slider__info
+                                h1.main-slider__heading
+                                    |Более 40 лучших врачей разных специальностей
+                                div.main-slider__description
+                                    p
+                                        |Предлагает медицинские услуги для всей семьи. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                a.common__link.common__link--backing.main-slider__link(href="")
+                                    |Подробнее
+                div.main-slider__pagination.js-main-slider-pagination
+                div.main-slider__arrows
+                    div.main-slider__arrow.js-main-slider-arrow-left
+                        svg(width="20" height="37")
+                            use(xlink:href="#arrow-left")
+                    div.main-slider__arrow.js-main-slider-arrow-right
+                        svg(width="20" height="37")
+                            use(xlink:href="#arrow-right")
+            section.search
+                form.form.form--search
+                    div.form__group
+                        input.form__input.form__input--rounded(placeholder="Поиск по сайту")
+                    button.common__button.common__button--medium.form__search-button
+                        |Искать
+            section.services
+                h1.common__h1-heading.services__heading
+                    |Услуги
+                div.tabs.services__tabs.js-tabs(data-tabs="services")
+                    ul.tabs__list
+                        li.tabs__item.tabs__item--active
+                            button.tabs__button(data-tab="grown")
+                                |Взрослое отделение
+                        li.tabs__item
+                            button.tabs__button(data-tab="child")
+                                |Детское отделение                          
+                        li.tabs__item
+                            button.tabs__button(data-tab="vaccination")
+                                |Центр вакцинации                     
+                        li.tabs__item
+                            button.tabs__button(data-tab="check-up")
+                                |ЧЕК-АП программы
+                div.services__container(data-tabs-content="services")
+                    ul.services__list(data-tab-content="grown")
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-05.svg", alt="")
+                            a.services__link(href="")
+                                |Акушер-гинеколог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-08.svg", alt="")
+                            a.services__link(href="")
+                                |Аллерголог-иммунолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-19.svg", alt="")
+                            a.services__link(href="")
+                                |Гастроэнтеролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-01.svg", alt="")
+                            a.services__link(href="")
+                                |Дерматовенеролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-06.svg", alt="")
+                            a.services__link(href="")
+                                |Диетолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-09.svg", alt="")
+                            a.services__link(href="")
+                                |Инфекционист
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-24.svg", alt="")
+                            a.services__link(href="")
+                                |Кардиолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-14.svg", alt="")
+                            a.services__link(href="")
+                                |Клинический психолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-03.svg", alt="")
+                            a.services__link(href="")
+                                |Колопроктолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-27.svg", alt="")
+                            a.services__link(href="")
+                                |Лаборатория
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-15.svg", alt="")
+                            a.services__link(href="")
+                                |ЛОР (Отоларинголог)
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-25.svg", alt="")
+                            a.services__link(href="")
+                                |Маммолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-35.svg", alt="")
+                            a.services__link(href="")
+                                |Мануальный терапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-23.svg", alt="")
+                            a.services__link(href="")
+                                |Массажист
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-16.svg", alt="")
+                            a.services__link(href="")
+                                |Невролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-34.svg", alt="")
+                            a.services__link(href="")
+                                |Нефролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-28.svg", alt="")
+                            a.services__link(href="")
+                                |Онколог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-20.svg", alt="")
+                            a.services__link(href="")
+                                |Остеопат
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-22.svg", alt="")
+                            a.services__link(href="")
+                                |Офтальмолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-10.svg", alt="")
+                            a.services__link(href="")
+                                |Психиатр
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-11.svg", alt="")
+                            a.services__link(href="")
+                                |Процедурный кабинет
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-33.svg", alt="")
+                            a.services__link(href="")
+                                |Пульмонолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-17.svg", alt="")
+                            a.services__link(href="")
+                                |Ревматолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-26.svg", alt="")
+                            a.services__link(href="")
+                                |Рефлексотерапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-30.svg", alt="")
+                            a.services__link(href="")
+                                |Сердечно-сосудистый хирург
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-18.svg", alt="")
+                            a.services__link(href="")
+                                |Справки и сертификаты
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-29.svg", alt="")
+                            a.services__link(href="")
+                                |Терапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-32.svg", alt="")
+                            a.services__link(href="")
+                                |Травматолог-ортопед
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-13.svg", alt="")
+                            a.services__link(href="")
+                                |УЗИ
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-02.svg", alt="")
+                            a.services__link(href="")
+                                |Услуги на дому
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-04.svg", alt="")
+                            a.services__link(href="")
+                                |Уролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-21.svg", alt="")
+                            a.services__link(href="")
+                                |Физиотерапия
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-07.svg", alt="")
+                            a.services__link(href="")
+                                |Функциональная диагностика
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-12.svg", alt="")
+                            a.services__link(href="")
+                                |Хирург
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-31.svg", alt="")
+                            a.services__link(href="")
+                                |Эндокринолог
+                    ul.services__list(data-tab-content="child")
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-05.svg", alt="")
+                            a.services__link(href="")
+                                |Акушер-гинеколог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-08.svg", alt="")
+                            a.services__link(href="")
+                                |Аллерголог-иммунолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-19.svg", alt="")
+                            a.services__link(href="")
+                                |Гастроэнтеролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-01.svg", alt="")
+                            a.services__link(href="")
+                                |Дерматовенеролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-06.svg", alt="")
+                            a.services__link(href="")
+                                |Диетолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-09.svg", alt="")
+                            a.services__link(href="")
+                                |Инфекционист
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-24.svg", alt="")
+                            a.services__link(href="")
+                                |Кардиолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-14.svg", alt="")
+                            a.services__link(href="")
+                                |Клинический психолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-03.svg", alt="")
+                            a.services__link(href="")
+                                |Колопроктолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-27.svg", alt="")
+                            a.services__link(href="")
+                                |Лаборатория
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-15.svg", alt="")
+                            a.services__link(href="")
+                                |ЛОР (Отоларинголог)
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-35.svg", alt="")
+                            a.services__link(href="")
+                                |Мануальный терапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-23.svg", alt="")
+                            a.services__link(href="")
+                                |Массажист
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-16.svg", alt="")
+                            a.services__link(href="")
+                                |Невролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-34.svg", alt="")
+                            a.services__link(href="")
+                                |Нефролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-28.svg", alt="")
+                            a.services__link(href="")
+                                |Онколог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-20.svg", alt="")
+                            a.services__link(href="")
+                                |Остеопат
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-22.svg", alt="")
+                            a.services__link(href="")
+                                |Офтальмолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-10.svg", alt="")
+                            a.services__link(href="")
+                                |Психиатр
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-11.svg", alt="")
+                            a.services__link(href="")
+                                |Процедурный кабинет
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-33.svg", alt="")
+                            a.services__link(href="")
+                                |Пульмонолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-17.svg", alt="")
+                            a.services__link(href="")
+                                |Ревматолог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-26.svg", alt="")
+                            a.services__link(href="")
+                                |Рефлексотерапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-30.svg", alt="")
+                            a.services__link(href="")
+                                |Сердечно-сосудистый хирург
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-18.svg", alt="")
+                            a.services__link(href="")
+                                |Справки и сертификаты
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-29.svg", alt="")
+                            a.services__link(href="")
+                                |Терапевт
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-32.svg", alt="")
+                            a.services__link(href="")
+                                |Травматолог-ортопед
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-13.svg", alt="")
+                            a.services__link(href="")
+                                |УЗИ
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-02.svg", alt="")
+                            a.services__link(href="")
+                                |Услуги на дому
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-04.svg", alt="")
+                            a.services__link(href="")
+                                |Уролог
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-21.svg", alt="")
+                            a.services__link(href="")
+                                |Физиотерапия
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-07.svg", alt="")
+                            a.services__link(href="")
+                                |Функциональная диагностика
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-12.svg", alt="")
+                            a.services__link(href="")
+                                |Хирург
+                        li.services__item
+                            img.services__icon(src="images/services/service-icon-31.svg", alt="")
+                            a.services__link(href="")
+                                |Эндокринолог
+            section.company
+                h1.common__h1-heading.company__heading
+                    |О наших клиниках
+                div.company__advantages
+                    div.advantage.advantage--doctors
+                        div.advantage__background
+                            picture
+                                source(srcset="images/company/doctor-background_media-1024.jpg" media="(min-width: 1024px)")
+                                source(srcset="images/company/doctor-background_media-320.jpg" media="(max-width: 1024px)")
+                                img.advantage__background-image(src="images/company/doctor-background_media-1024.jpg", alt="")
+                        img.advantage__doctor-image(src="images/company/doctor.png", alt="")
+                        div.advantage__info
+                            p
+                                |Более 40 лучших врачей разных специальностей и более 20 медицинских сестер с «золотыми руками»
+                            a.common__link.common__link--large.advantage__link(href="")
+                                |Специалисты
+                            div.advantage__note
+                                span.advantage__note-value
+                                    |Чаленко Татьяна Владимировна
+                                span.advantage__note-hint
+                                    |Главный врач
+                    div.advantage
+                        div.advantage__background
+                            picture
+                                source(srcset="images/company/ages-background_media-1024.jpg" media="(min-width: 1024px)")
+                                source(srcset="images/company/ages-background_media-320.jpg" media="(max-width: 1024px)")
+                                img.advantage__background-image(src="images/company/ages-background_media-1024.jpg", alt="")
+                        div.advantage__info
+                            p
+                                |Медицинская помощь для всех членов вашей семьи, независимо от возраста и пола
+                    div.advantage
+                        div.advantage__background
+                            picture
+                                source(srcset="images/company/equipment-background_media-1024.jpg" media="(min-width: 1024px)")
+                                source(srcset="images/company/equipment-background_media-320.jpg" media="(max-width: 1024px)")
+                                img.advantage__background-image(src="images/company/equipment-background_media-1024.jpg", alt="")
+                        div.advantage__info
+                            p
+                                |Cовременное, высокотехнологичное оборудование
+                    div.advantage
+                        div.advantage__background
+                            picture
+                                source(srcset="images/company/interior-background_media-1024.jpg" media="(min-width: 1024px)")
+                                source(srcset="images/company/interior-background_media-320.jpg" media="(max-width: 1024px)")
+                                img.advantage__background-image(src="images/company/interior-background_media-1024.jpg", alt="")
+                        div.advantage__info
+                            p
+                                |Просторные, удобные, современные клиники
+                            button.common__button.common__button--large.common__button--no-backing.common__button--underline.advantage__button
+                                |Фотогалерея
+                div.company__link-wrapper
+                    a.common__link.common__link--large.company__link(href="")
+                        |Подробнее о клиниках
+            section.news
+                h1.common__h1-heading.news__heading
+                    |Новости
+                ul.news__list
+                    li.news-preview.news__item
+                        span.news-preview__date
+                            |03.07.2020
+                        h4.common__h4-heading.news-preview__heading
+                            a.news-preview__link(href="")
+                                |Физиотерапия на дому
+                        p.news-preview__description
+                            |Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                    li.news-preview.news__item
+                        span.news-preview__date
+                            |18.06.2020
+                        h4.common__h4-heading.news-preview__heading
+                            a.news-preview__link(href="")
+                                |Жидкий азот – криомассаж для красоты
+                        p.news-preview__description
+                            |Для достижения полного понимания и комфорта в сотрудничестве с вами просим вас ознакомиться с разделом сайта «Для пациентов».
+                    li.news-preview.news__item
+                        span.news-preview__date
+                            |01.06.2020
+                        h4.common__h4-heading.news-preview__heading
+                            a.news-preview__link(href="")
+                                |У нас безопасно
+                        p.news-preview__description
+                            |Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                a.common__link.common__link--large.news__link(href="")
+                    |Все новости
+            section.reviews
+                h1.common__h1-heading.reviews__heading
+                    |Отзывы
+                div.reviews-slider.swiper-container.js-reviews-slider
+                    ul.reviews-slider__list.swiper-wrapper
+                        li.reviews-slider__item.swiper-slide
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |30.01.2020
+                                    span.review__author
+                                        |Дмитрий
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                        p
+                                            |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                                button.common__button.review__button
+                                    |Читать полностью
+                        li.reviews-slider__item.swiper-slide
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |17.03.2020
+                                    span.review__author
+                                        |Мария
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                        p
+                                            |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                                button.common__button.review__button
+                                    |Читать полностью
+                        li.reviews-slider__item.swiper-slide
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |30.01.2020
+                                    span.review__author
+                                        |Дмитрий
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                        p
+                                            |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                                button.common__button.review__button
+                                    |Читать полностью
+                        li.reviews-slider__item.swiper-slide
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |17.03.2020
+                                    span.review__author
+                                        |Мария
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                        p
+                                            |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                                button.common__button.review__button
+                                    |Читать полностью
+                    div.reviews-slider__arrows
+                        div.reviews-slider__arrow.js-reviews-slider-arrow-left
+                            svg(width="20" height="37")
+                                use(xlink:href="#arrow-left")
+                        div.reviews-slider__arrow.js-reviews-slider-arrow-right
+                            svg(width="20" height="37")
+                                use(xlink:href="#arrow-right")
+                div.reviews__link-wrapper
+                    a.common__link.common__link--large.reviews__link(href="")
+                        |Все отзывы
+            section.branches
+                h1.common__h1-heading.branches__heading
+                    |Наши отделения
+                div.tabs.branches__tabs.js-tabs(data-tabs="branches")
+                    ul.tabs__list
+                        li.tabs__item.tabs__item--active
+                            button.tabs__button(data-tab="branch-01")
+                                |ул. Мамина-Сибиряка, 128
+                        li.tabs__item
+                            button.tabs__button(data-tab="branch-02")
+                                |ул. Академика Шварца, 14
+                ul.branches__list(data-tabs-content="branches")
+                    li.branches__item(data-tab-content="branch-01")
+                        div.branch
+                            div.branch__top
+                                div.branch__image-wrapper
+                                    img.branch__image(src="images/branches/branch-01.jpg", alt="")
+                                div.branch__map-wrapper
+                                    div#map.branch__map
+                            div.branch__bottom
+                                div.branch__col
+                                    div.common__wysiwyg.branch__work-hours
+                                        p
+                                            |Филиал работает ежедневно с 07:30 до 20:00
+                                    span.branch__opening-sign
+                                        |Сейчас открыто
+                                div.branch__col
+                                    div.common__wysiwyg.branch__description
+                                        p
+                                            |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                        p
+                                            |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
+
+

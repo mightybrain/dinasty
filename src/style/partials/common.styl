@@ -1,0 +1,153 @@
+svg path,
+svg line,
+svg rect,
+svg polygon,
+svg circle
+    fill inherit !important
+    stroke inherit !important
+    stroke-width inherit !important
+
+.common
+    &__h1-heading
+        margin 0
+        font-family "Spectral"
+        font-size 62px
+        line-height 66px
+        font-weight 300
+        color black
+        @media tablet-portrait-small
+            font-size 48px
+            line-height 52px
+        @media phone
+            font-size 36px
+            line-height 40px
+
+        &--white
+            color white
+
+    &__h4-heading
+        margin 0
+        font-family "Spectral"
+        font-size 26px
+        line-height 30px
+        font-weight 300
+        color black
+        @media tablet-landscape-medium
+            font-size 22px
+            line-height 26px
+
+        &--white
+            color white       
+
+    &__link
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        text-decoration none
+        outline none
+        border-bottom 1px solid black
+        transition border .3s 0s ease 
+
+        &:hover
+            border-bottom 1px solid transparent
+
+        &--backing
+            display inline-block
+            padding 9px 25px 8px 25px
+            color white
+            background-color deep-pink
+            border none
+            border-radius 19.5px
+            transition background-color .3s 0s ease 
+
+            &:hover
+                background-color bright-pink
+                border none
+
+        &--large
+            font-size 26px
+            line-height 30px
+            @media tablet-landscape-medium
+                font-size 22px
+                line-height 26px
+
+    &__button
+        padding 9px 25px 8px 25px
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color white
+        text-align left
+        background-color deep-pink
+        border none
+        border-radius 19.5px
+        outline none
+        transition background-color .3s 0s ease
+        cursor pointer
+
+        &--medium
+            font-size 20px
+            line-height 24px
+            padding 12px 30px 11px 30px
+            border-radius 23.5px
+
+        &--large
+            font-size 26px
+            line-height 30px
+            padding 12px 30px 11px 30px
+            border-radius 26.5px
+            @media tablet-landscape-medium
+                font-size 22px
+                line-height 26px
+
+        &--no-backing
+            padding 0
+            color black
+            background none
+            transition color .3s 0s ease
+
+            & svg
+                display inline-block
+                margin 0 7px 0 0
+                vertical-align text-top
+                fill none
+                stroke black
+                stroke-width 1.2px
+                transition stroke .3s 0s ease
+
+            &:hover
+                color bright-pink
+
+                & svg
+                    stroke bright-pink
+
+        &--underline
+            border-bottom 1px dotted black
+            border-radius 0
+            transition border .3s 0s ease
+
+            &:hover
+                color black
+                border-bottom 1px dotted transparent
+            
+    &__wysiwyg
+        & p:not([class])
+            margin 0
+            font-family "Spectral"
+            font-size 18px
+            line-height 26px
+            font-weight 300
+            color black
+
+        & p:not([class]) + p:not([class])
+            margin 18px 0 0 0
+
+        &--white
+            & p:not([class])
+                color white
+
+.common__button:not(.common__button--no-backing):hover
+    background-color bright-pink

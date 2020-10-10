@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 20.36 38.21">
+    <path d="M19.76,37.61.6,19.1,19.76.6"/>
+</symbol><symbol id="arrow-right" viewBox="0 0 20.36 38.21">
+    <path d="M.6.6,19.76,19.1.6,37.61"/>
+</symbol><symbol id="cabinet-icon" viewBox="0 0 15.5 16.4">
+	<g>
+		<path d="M7.7,0.6c2.9,0,5.2,2.3,5.2,5.2S10.6,11,7.7,11S2.6,8.6,2.6,5.8S4.9,0.6,7.7,0.6z"/>
+		<path d="M0.7,15.8c1.1-2.9,3.8-4.9,7-4.9s6,2,7,4.9"/>
+	</g>
+</symbol><symbol id="search-icon" viewBox="0 0 15.5 16.4">
+	<g>
+		<path d="M2.5,2.9c2.5-2.5,6.7-2.5,9.2,0s2.5,6.7,0,9.2s-6.7,2.5-9.2,0l0,0C0,9.6,0,5.5,2.5,2.9z"/>
+		<line x1="11.7" y1="12.1" x2="14.9" y2="15.3"/>
+	</g>
+</symbol></svg>

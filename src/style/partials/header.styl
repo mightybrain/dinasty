@@ -1,0 +1,362 @@
+.head
+    display flex
+    flex-wrap nowrap
+    align-items center
+    width calc(100% - 78px)
+    max-width 1440px
+    margin 0 auto
+    padding 35px 0 39px 0
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+        padding 30px 0 34px 0
+    @media tablet-portrait-large
+        flex-direction column-reverse
+    @media tablet-portrait-small
+        flex-direction row
+        width calc(100% - 40px)
+
+    &__burger
+        position absolute
+        top 39px
+        left 32px
+        z-index 2
+        display none
+        @media tablet-portrait-large
+            display block
+        @media tablet-portrait-small
+            left auto
+            right 20px
+
+    &__aside
+        margin 0 0 0 auto
+        @media tablet-portrait-small
+            position fixed
+            top 0
+            left 0
+            z-index 2
+            width 0
+            height 100vh
+            background-color white
+            overflow hidden
+            transition width .75s .5s ease
+
+    &__rows
+        display flex
+        flex-direction column
+        align-items flex-end
+        @media tablet-portrait-small
+            align-items center
+            box-sizing border-box
+            width 100%
+            height 100%
+            padding 100px 0
+            overflow-y scroll
+            opacity 0
+            visibility hidden
+            transition opacity .5s 0s ease, visibility 0s .5s linear
+
+    &__row--top
+        @media tablet-portrait-small
+            display flex
+            flex-direction column
+            align-items center
+            margin 0 0 50px 0
+
+    &__row + &__row
+        margin 30px 0 0 0
+
+    &__menu
+        @media tablet-portrait-large
+            position fixed
+            top 0
+            left 0
+            z-index 2
+        @media tablet-portrait-small
+            position static
+
+    &__button
+        padding 9px 25px 8px 25px
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color white
+        text-align left
+        background-color deep-pink
+        border none
+        border-radius 19.5px
+        outline none
+        transition background-color .3s 0s ease
+        cursor pointer
+        @media tablet-portrait-small
+            font-size 22px
+            line-height 26px
+            border-radius 21.5px
+
+        &--no-backing
+            padding 0
+            color black
+            background none
+            transition color .3s 0s ease
+
+            & svg
+                display inline-block
+                margin 0 7px 0 0
+                vertical-align text-top
+                fill none
+                stroke black
+                stroke-width 1.2px
+                transition stroke .3s 0s ease
+                @media tablet-portrait-small
+                    display none
+
+            &:hover
+                color bright-pink
+
+                & svg
+                    stroke bright-pink            
+        
+        &:not(:last-child)
+            margin 0 30px 0 0
+            @media tablet-landscape-medium
+                margin 0 25px 0 0
+            @media tablet-portrait-small
+                margin 0 0 30px 0
+
+    &__phone
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        text-decoration none
+        @media tablet-portrait-small
+            font-size 22px
+            line-height 26px
+
+        &:not(:last-child)
+            margin 0 30px 0 0
+            @media tablet-landscape-medium
+                margin 0 25px 0 0
+            @media tablet-portrait-small
+                margin 0 0 30px 0
+
+.head__button:not(.head__button--no-backing):hover
+    background-color bright-pink
+
+.menu
+    @media tablet-portrait-large
+        width 0%
+        height 100vh
+        background-color white
+        overflow hidden
+        transition width .75s .5s ease
+    @media tablet-portrait-small
+        width auto
+        height auto
+        background-color transparent
+        overflow visible
+        transition none
+
+    &__list
+        display flex
+        flex-wrap nowrap
+        margin 0
+        padding 0
+        list-style none
+        @media tablet-portrait-large
+            flex-direction column
+            align-items center
+            box-sizing border-box
+            height 100%
+            padding 100px 0
+            overflow-y auto
+            opacity 0
+            visibility hidden
+            transition opacity .5s 0s ease, visibility 0s .5s linear
+        @media tablet-portrait-small
+            padding 0
+            opacity 1
+            visibility visible
+            transition none
+
+    &__item
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        transition color .3s 0s ease
+        cursor default
+        @media tablet-portrait-large
+            font-size 36px
+            line-height 40px
+        @media tablet-portrait-small
+            font-size 22px
+            line-height 26px
+
+        &:hover
+            color bright-pink
+
+        &--active
+            color bright-pink
+
+    &__item + &__item
+        margin 0 0 0 30px
+        @media tablet-landscape-medium
+            margin 0 0 0 25px
+        @media tablet-portrait-large
+            margin 30px 0 0 0
+
+    &__link
+        position relative
+        color inherit
+        text-decoration none
+        outline none
+        cursor pointer
+
+    &__button
+        padding 0
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+        border none
+        outline none
+        background none
+        transition color .3s 0s ease
+        cursor pointer
+
+        &--search
+            &::after
+                content "Поиск"
+                font-family "Spectral"
+                font-size 18px
+                line-height 22px
+                font-weight 300
+                color black
+                transition color .3s 0s ease
+                @media tablet-landscape-large
+                    display none
+                @media tablet-portrait-large
+                    display block
+                    font-size 36px
+                    line-height 40px
+                @media tablet-portrait-small
+                    font-size 22px
+                    line-height 26px
+
+            & svg
+                display inline-block
+                margin 0 5px 0 0
+                vertical-align text-top
+                fill none
+                stroke black
+                stroke-width 1.2px
+                transition stroke .3s 0s ease
+                @media tablet-portrait-large
+                    display none
+
+            &:hover
+                &::after
+                    color bright-pink
+
+                & svg
+                    stroke bright-pink
+
+        &:hover
+            color bright-pink
+
+.logo
+    &__link
+        text-decoration none
+
+    &__image
+        display block
+        @media tablet-landscape-small
+            width 216px
+            height 42px
+
+.burger
+    position absolute
+    width 32px
+    height 21px
+
+    &::before
+        content ""
+        position absolute
+        top 0
+        left 0
+        transform rotate(0deg)
+        display block
+        width 100%
+        height 1px
+        background-color black
+        transition transform .3s 0s ease, top .3s .4s ease
+
+    &__stroke
+        position absolute
+        top 10px
+        left 0
+        display block
+        width 100%
+        height 1px
+        background-color black
+        opacity 1
+        transition opacity 0s .3s linear
+
+    &::after
+        content ""
+        position absolute
+        top 20px
+        left 0
+        transform rotate(0deg)
+        display block
+        width 100%
+        height 1px
+        background-color black
+        transition transform .3s 0s ease, top .3s .4s ease
+
+body.js-burger-menu-is-open
+    & .burger
+        &::before
+            top 10px
+            transform rotate(45deg)
+            transition top .3s 0s ease, transform .3s .4s ease 
+
+        &__stroke
+            opacity 0
+
+        &::after
+            top 10px
+            transform rotate(-45deg)
+            transition top .3s 0s ease, transform .3s .4s ease 
+
+    & .menu
+        @media tablet-portrait-large
+            width 100%
+            transition width .75s 0s ease
+        @media tablet-portrait-small
+            width auto
+            transition none
+
+        &__list
+            @media tablet-portrait-large
+                opacity 1
+                visibility visible
+                transition opacity .5s .75s ease, visibility 0s .75s linear
+            @media tablet-portrait-small
+                transition none
+
+    & .head
+        &__aside
+            @media tablet-portrait-small
+                width 100%
+                transition width .75s 0s ease
+
+        &__rows
+            @media tablet-portrait-small
+                opacity 1
+                visibility visible
+                transition opacity .5s .75s ease, visibility 0s .75s linear
