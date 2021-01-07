@@ -2,10 +2,6 @@
 //= partials/swiper-initialize.js
 
 
-// Валидация форм
-// partials/validation.js
-
-
 // Показывает и скрывает попапы
 // partials/popup.js
 

@@ -1,79 +1,54 @@
-(function () {
+class Tabs{
+    constructor(container){
+        this.container = container;
+        this.content = document.querySelector("[data-tabs-content=" + container.getAttribute("data-tabs") + "]");
+        this.init();
+    }
 
-    let tabsContainers = document.querySelectorAll(".js-tabs");
-    if(tabsContainers){
-        for(let i = 0; i < tabsContainers.length; i++){
-            let tabs = new TabsInit(tabsContainers[i]);
-        };
-    };
+    init(){
+        let _this = this;
 
-    // Инициализирует табы
-    function TabsInit(tabsContainer){
+        this.container.querySelectorAll("[data-tab]").forEach(function(item){
+            item.addEventListener("click", function(){
+                if(!this.classList.contains("js-active-tab")){
+                    _this.container.querySelector(".js-active-tab").classList.remove("js-active-tab");
+                    this.classList.add("js-active-tab");
+                    _this.changeState();
+                }
+            })
+        })
 
-        let tabButtons = tabsContainer.querySelectorAll("[data-tab]");
-        if(tabButtons){
-            for(let i = 0; i < tabButtons.length; i++){
-                tabButtons[i].addEventListener("click", changeTabState.bind(null, tabsContainer, tabButtons[i]));
-            };
-        };
+        if(this.container.querySelector(".js-active-tab")){
+            this.changeState();
+        }else{
+            this.container.querySelector("[data-tab]").classList.add("js-active-tab");
+            this.changeState();
+        }
 
-        // Находим кнопку активного таба
-        let activeTabButton = tabsContainer.querySelector(".tabs__item--active").firstElementChild;
+    }
 
-        // Выводим контент активного таба
-        changeContent(activeTabButton, tabsContainer);
-    };
+    changeState(){
 
-    // Меняет активный таб
-    function changeTabState(tabsContainer, tabButton){
+        let activeTab = this.container.querySelector(".js-active-tab");
 
-        // Находим в корневой группе текущий активный таб и переназначаем
-        tabsContainer.querySelector(".tabs__item--active").classList.remove("tabs__item--active");
-        tabButton.parentElement.classList.add("tabs__item--active");
-        
+        this.content.querySelectorAll("[data-tab-content]").forEach(function(item){
 
-        // Выводим контент активного таба
-        changeContent(tabButton, tabsContainer)
-    };
+            if(item.getAttribute("data-tab-content").includes(activeTab.getAttribute("data-tab"))){
+                
+                item.classList.remove("js-content-is-hidden");
 
-    // Выводит контент активного таба
-    function changeContent(tabButton, tabsContainer){
-
-        // Находим контент для текущей группы табов
-        let tabsContent = document.querySelector("[data-tabs-content=" + tabsContainer.getAttribute("data-tabs") + "]");
-        
-        // Если контент найден
-        if(tabsContent){
-
-            // Находим все группы или элементы контента
-            let tabsContentItems = tabsContent.querySelectorAll("[data-tab-content]");
-
-            if(tabButton.getAttribute("data-tab") == "all"){
-                for(let i = 0; i < tabsContentItems.length; i++){
-                    if(tabsContentItems[i].classList.contains("js-content-is-hidden")){
-                        tabsContentItems[i].classList.remove("js-content-is-hidden");
-                    };  
-                };
             }else{
-                // Проверяем принадлежность каждого элемента к текущему активному табу
-                for(let i = 0; i < tabsContentItems.length; i++){
 
-                    // Если элемент относится к текущему табу, делаем его видимым
-                    if(tabsContentItems[i].getAttribute("data-tab-content").includes(tabButton.getAttribute("data-tab"))){
-                        if(tabsContentItems[i].classList.contains("js-content-is-hidden")){
-                            tabsContentItems[i].classList.remove("js-content-is-hidden");
-                        };
-                    // Если элемент не относится к текущему табу, скрываем
-                    }else{
-                        if(!tabsContentItems[i].classList.contains("js-content-is-hidden")){
-                            tabsContentItems[i].classList.add("js-content-is-hidden");
-                        };
-                    };
-                    
-                };
-            };
+                item.classList.add("js-content-is-hidden");
+            }
+        })
+    }
+}
 
-        };
-    };
+if(document.querySelector(".js-tabs")){
+    document.querySelectorAll(".js-tabs").forEach(function(item){
+        new Tabs(item);
+    })
+}
 
-})();
+

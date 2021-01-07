@@ -72,15 +72,14 @@
             visibility hidden
             transition opacity .3s 0s ease, visibility 0s .3s linear , width 0s .3s linear, left 0s .3s linear
 
-.tabs__item--active
-    & .tabs__button
-        padding 0 30px
-        color bright-pink
-        cursor default
+.tabs__button.js-active-tab
+    padding 0 30px
+    color bright-pink
+    cursor default
 
-        &::before
-            left 0
-            width 100%
-            opacity 1
-            visibility visible
-            transition opacity .3s .3s ease, visibility 0s .3s linear, width 0s 0s linear, left 0s 0s linear
+    &::before
+        left 0
+        width 100%
+        opacity 1
+        visibility visible
+        transition opacity .3s .3s ease, visibility 0s .3s linear, width 0s 0s linear, left 0s 0s linear

@@ -1,18 +1,18 @@
-(function(){
+class Burger{
 
-    const burgerButton = document.querySelector(".burger");
-    if(burgerButton){
-        burgerButton.addEventListener("click", changeMenuState);
-    };
+    constructor(button){
+        this.button = button;
+        this.init();
+    }
 
-    function changeMenuState(){
-        document.body.classList.toggle("js-burger-menu-is-open");
+    init(){
+        this.button.addEventListener("click", function(){
+            document.body.classList.toggle("js-burger-menu-is-open");
+        })
+    }
 
-        /*if(!burgerButton.classList.contains("js-burger-is-open")){
-            burgerButton.classList.add("js-burger-is-open");
-        }else if(burgerButton.classList.contains("js-burger-is-open")){
-            burgerButton.classList.remove("js-burger-is-open");
-        };*/
-    };
-    
-})();
+}
+
+if(document.querySelector(".js-burger")){
+    new Burger(document.querySelector(".js-burger"));
+};

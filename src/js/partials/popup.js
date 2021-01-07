@@ -1,4 +1,18 @@
-(function(){
+class PopupButton{
+    constructor(){
+
+    }
+
+    init(){
+
+    }
+}
+
+function changePopupState(){
+
+}
+
+/*(function(){
 
     const popupButtons = document.querySelectorAll(".js-popup-button");
 
@@ -39,4 +53,4 @@
         document.body.classList.remove("js-popup-is-open");
     };
 
-})();
+})();*/

@@ -1222,12 +1222,12 @@ body.js-burger-menu-is-open .burger::after {
   -webkit-transition: opacity 0.3s 0s ease, visibility 0s 0.3s linear, width 0s 0.3s linear, left 0s 0.3s linear;
   transition: opacity 0.3s 0s ease, visibility 0s 0.3s linear, width 0s 0.3s linear, left 0s 0.3s linear;
 }
-.tabs__item--active .tabs__button {
+.tabs__button.js-active-tab {
   padding: 0 30px;
   color: #c8044d;
   cursor: default;
 }
-.tabs__item--active .tabs__button::before {
+.tabs__button.js-active-tab::before {
   left: 0;
   width: 100%;
   opacity: 1;

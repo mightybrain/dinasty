@@ -58,16 +58,16 @@ html(lang="ru")
                     |Услуги
                 div.tabs.services__tabs.js-tabs(data-tabs="services")
                     ul.tabs__list
-                        li.tabs__item.tabs__item--active
-                            button.tabs__button(data-tab="grown")
+                        li.tabs__item
+                            button.tabs__button.js-active-tab(data-tab="grown")
                                 |Взрослое отделение
                         li.tabs__item
                             button.tabs__button(data-tab="child")
                                 |Детское отделение                          
-                        li.tabs__item
+                        //li.tabs__item
                             button.tabs__button(data-tab="vaccination")
                                 |Центр вакцинации                     
-                        li.tabs__item
+                        //li.tabs__item
                             button.tabs__button(data-tab="check-up")
                                 |ЧЕК-АП программы
                 div.services__container(data-tabs-content="services")
@@ -397,7 +397,7 @@ html(lang="ru")
                         div.advantage__info
                             p
                                 |Просторные, удобные, современные клиники
-                            button.common__button.common__button--large.common__button--no-backing.common__button--underline.advantage__button
+                            //button.common__button.common__button--large.common__button--no-backing.common__button--underline.advantage__button
                                 |Фотогалерея
                 div.company__link-wrapper
                     a.common__link.common__link--large.company__link(href="")
@@ -508,7 +508,7 @@ html(lang="ru")
                     |Наши отделения
                 div.tabs.branches__tabs.js-tabs(data-tabs="branches")
                     ul.tabs__list
-                        li.tabs__item.tabs__item--active
+                        li.tabs__item
                             button.tabs__button(data-tab="branch-01")
                                 |ул. Мамина-Сибиряка, 128
                         li.tabs__item
