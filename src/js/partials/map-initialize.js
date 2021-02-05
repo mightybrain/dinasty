@@ -1,17 +1,31 @@
 // Инициализация карты Яндекс
-if(document.getElementById("map")){
-    ymaps.ready(mapInit);
+let branches = {
+    mamsib: [56.831886, 60.620480],
+    akshv: [56.795475, 60.624631]
 }
 
-function mapInit(){ 
-    let locationMap = new ymaps.Map("map", {
-        center: [56.831886, 60.620480],
+if(document.querySelector(".js-branch-map")){
+    ymaps.ready(function(){
+
+        document.querySelectorAll(".js-branch-map").forEach(function(item){
+            if(branches[item.getAttribute("data-branch")]){  
+                mapInit(branches[item.getAttribute("data-branch")], item)
+            }
+        })
+        
+    })
+}
+
+function mapInit(arr, elem){ 
+
+    let map = new ymaps.Map(elem, {
+        center: arr,
         zoom: 15,
-        controls: [],
+        controls: [],     
     })
 
-    locationMap.geoObjects.add(
-        new ymaps.Placemark([56.831886, 60.620480], {
+    map.geoObjects.add(
+        new ymaps.Placemark(arr, {
             hintContent:"",
             balloonContent:""
         }, {

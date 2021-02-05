@@ -1,160 +1,88 @@
 .company
-    width calc(100% - 78px)
-    max-width 1440px
-    margin 0 auto
-    @media tablet-landscape-medium
-        width calc(100% - 64px)
-    @media tablet-portrait-small
-        width calc(100% - 40px)
-
-    &__heading
-        margin 0 0 46px 0
-
-    &__advantages
-        display grid
-        grid-template-columns 1fr 1fr 1fr
-        grid-template-rows minmax(540px, auto) repeat(2, minmax(335px, auto))
-        grid-gap 36px
-        @media laptop
-            grid-gap 32px
+    width 100%
+    
+    &__row + &__row
+        margin 36px 0 0 0
         @media tablet-portrait-large
-            grid-template-columns 1fr 1fr
-            grid-template-rows auto
-            grid-column-gap 32px
-            grid-row-gap 50px
-        @media tablet-portrait-small
-            grid-template-columns 1fr
+            margin 100px 0 0 0
+            
+    &__cols
+        display flex
+        flex-wrap nowrap
+        justify-content space-between
+        @media tablet-portrait-medium
+            flex-direction column
 
-    &__link-wrapper
-        margin 44px 0 0 0
-        text-align center
-        @media phone
-            text-align left
+    &__col
+        display flex
+        align-items center
+        width calc(50% - 18px)
+        @media tablet-portrait-large
+            align-items flex-start
+        @media tablet-portrait-medium
+            width 100%
 
-.advantage
-    position relative
-    box-sizing border-box
-    padding 44px 48px
-    @media tablet-landscape-medium
-        padding 40px
-    @media tablet-portrait-large
-        padding 0
+    &__description
+        box-sizing border-box
+        padding 0 97px
+        @media tablet-landscape-medium
+            padding 0 50px
+        @media tablet-portrait-large
+            width 80%
+            padding 0
+        @media tablet-portrait-medium
+            width 100%
 
-    &__background
-        position absolute
-        top 0
-        left 0
+    &__image-wrapper
+        position relative
         width 100%
-        height 100%
+        height 600px
         border-radius 10px
         overflow hidden
         @media tablet-portrait-large
-            position relative
-            height 335px
-            margin 0 0 20px 0
+            height 350px
+        @media tablet-portrait-medium
+            max-width 400px
+            margin 31px 0 0 0
 
-        &-image
-            position absolute
-            top 50%
-            left 50%
-            transform translate(-50%, -50%)
-            display block
-            width 101%
-            height 101%
-            object-fit cover
-
-    &__doctor-image
+    &__image
         position absolute
-        bottom 0
-        right 170px
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
         display block
-        @media tablet-landscape-large
-            right 100px
-        @media tablet-landscape-medium
-            right 80px
-        @media tablet-landscape-small
-            right 40px
-        @media tablet-portrait-large
-            display none
+        width 101%
+        height 101%
+        object-fit cover
 
-    &__info
-        position relative
+    &__branches
         display flex
         flex-direction column
-        align-items flex-start
+        margin 92px 0 0 0
 
-        & p:not([class])
-            margin 0
-            font-family "Spectral"
-            font-size 26px
-            line-height 30px
-            font-weight 300
-            color black
-            @media tablet-landscape-medium
-                font-size 22px
-                line-height 26px
-
-    &__note
-        @media tablet-portrait-large
-            display none
-
-        &-value
-            font-family "Spectral"
-            font-size 18px
-            line-height 22px
-            font-weight 300
-            color black
-
-        &-hint
-            margin 0 0 0 7px
-            font-family "Spectral"
-            font-size 18px
-            line-height 22px
-            font-weight 300
-            color gray
+        &-heading
+            margin 0 0 38px 0
+            align-self center
             @media tablet-portrait-large
-                margin 0         
+                align-self flex-start
 
-    &__button,
-    &__link
-        margin 27px 0 0 0
-
-.advantage:nth-child(1)
-    grid-column 1 / -1
-    @media tablet-portrait-large
-        grid-column 1
-        grid-row 1
-    @media tablet-portrait-small
-        grid-column auto
-        grid-row auto
-
-    & .advantage__info
-        width 50%
-        max-width 500px
-        height 100%
+.company__row:nth-child(even)
+    & .company__cols
+        flex-direction row-reverse
         @media tablet-portrait-large
-            width 100%
+            flex-direction row
+        @media tablet-portrait-medium
+            flex-direction column
 
-    & .advantage__note
-        margin auto 0 0 0
-
-.advantage:nth-child(2)
-    grid-row 2 / 4
+.company__row > .company__description
+    max-width 774px
+    margin 0 auto
+    padding 108px 0 117px 0
+    text-align center
     @media tablet-portrait-large
-        grid-column 2
-        grid-row 1
-    @media tablet-portrait-small
-        grid-column auto
-        grid-row auto
-
-.advantage:nth-child(3),
-.advantage:nth-child(4)
-    grid-column 2 / -1
-    @media tablet-portrait-large
-        grid-column 1 / -1  
-
-    & .advantage__info
-        width 280px  
-        @media tablet-portrait-large
-            width 100% 
-    
+        padding 44px 0 117px 0
+    @media tablet-portrait-medium
+        max-width none
+        margin 0 0 24px 0
+        padding 0
+        text-align left

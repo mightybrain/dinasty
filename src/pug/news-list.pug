@@ -1,0 +1,163 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |О нас
+                            li.breadcrumbs__item
+                                |Новости
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Новости
+                section.news
+                    ul.news__list
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                span.news-preview__date
+                                    |03.07.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Физиотерапия на дому
+                                p.news-preview__description
+                                    |Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                div.news-preview__image-wrapper
+                                    img(src="images/media/news-image-01.jpg", alt="")
+                                span.news-preview__date
+                                    |18.06.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Жидкий азот – криомассаж для красоты
+                                p.news-preview__description
+                                    |Для достижения полного понимания и комфорта в сотрудничестве с вами просим вас ознакомиться с разделом сайта «Для пациентов».
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                span.news-preview__date
+                                    |01.06.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |У нас безопасно
+                                p.news-preview__description
+                                    |Мы оказываем медицинскую помощь для всех членов вашей семьи, независимо от возраста и пола.
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                span.news-preview__date
+                                    |03.05.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |8 августа - международный день офтальмологии
+                                p.news-preview__description
+                                    |С очками я столкнулся во 2 классе. Мои оценки стали значительно хуже и родители недоумевали. Выяснилось, что решение примеров было верным, просто я неверно списывал их с доски. 
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                div.news-preview__image-wrapper
+                                    img(src="images/media/news-image-02.jpg", alt="")
+                                span.news-preview__date
+                                    |18.04.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Рефлексотерапия для детей и взрослых
+                                p.news-preview__description
+                                    |Иглорефлексотерапия (ИРТ) – это старинная лечебная реабилитационная методика.
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                div.news-preview__image-wrapper
+                                    img(src="images/media/news-image-03.jpg", alt="")
+                                span.news-preview__date
+                                    |01.04.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Физиотерапия на дому
+                                p.news-preview__description
+                                    |Получайте физиолечение (физиотерапию) на дому — мы приезжаем к детям и взрослым в пределах г.Екатеринбурга.
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                div.news-preview__image-wrapper
+                                    img(src="images/media/news-image-04.jpg", alt="")
+                                span.news-preview__date
+                                    |03.03.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Кинезиотейпирование взрослым и детям
+                                p.news-preview__description
+                                    |Врач – невролог, специалист по кинезиотейпированию взрослых и детей, член  Национальной ассоциации специалистов.
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                span.news-preview__date
+                                    |18.02.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Забор крови с самыми сложными венами - не проблема!
+                                p.news-preview__description
+                                    |Проявляя заботу о пациентах, мы не просто следим за современными трендами в медицине, а приобретаем самое современное оборудование!
+                        li.news__item
+                            div.news-preview.js-bubble-hover
+                                span.news-preview__date
+                                    |01.02.2020
+                                h4.common__h4-heading.news-preview__heading
+                                    a.news-preview__link(href="")
+                                        |Конгресс по репродуктивной медицине
+                                p.news-preview__description
+                                    |Кузьмина Светлана Евгеньевна врач акушер - гинеколог, заведующая гинекологическим отделением посетила XIII Международный конгресс по репродуктивной медицине, проходивший с 21 по 24 января 2019 года.
+                    div.news__pagination
+                        div.pagination
+                            div.pagination__arrow.pagination__arrow--disabled
+                                //a.pagination__arrow-link(href="")
+                                svg(width="12" height="21")
+                                    use(xlink:href="#arrow-left-small")
+                            span.pagination__counter
+                                span.pagination__current-page
+                                    |1
+                                span.pagination__last-page
+                                    |99
+                            ul.pagination__list
+                                li.pagination__item.pagination__item--active
+                                    |1
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |2
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |3
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |4
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |5
+                                li.pagination__item
+                                    |...
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |99
+                            div.pagination__arrow
+                                a.pagination__arrow-link(href="")
+                                    svg(width="12" height="21")
+                                        use(xlink:href="#arrow-right-small")
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
+
+

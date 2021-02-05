@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 20.36 38.21">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left-small" viewBox="0 0 12.263 21.784">
+	<path d="M11.771,21.274L1.021,10.895L11.771,0.51"/>
+</symbol><symbol id="arrow-left" viewBox="0 0 20.36 38.21">
     <path d="M19.76,37.61.6,19.1,19.76.6"/>
+</symbol><symbol id="arrow-right-small" viewBox="0 0 12.263 21.784">
+	<path d="M0.492,0.51l10.75,10.379L0.492,21.274"/>
 </symbol><symbol id="arrow-right" viewBox="0 0 20.36 38.21">
     <path d="M.6.6,19.76,19.1.6,37.61"/>
 </symbol><symbol id="cabinet-icon" viewBox="0 0 15.5 16.4">

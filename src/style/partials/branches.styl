@@ -1,21 +1,23 @@
 .branches
-    width calc(100% - 78px)
-    max-width 1440px
-    margin 0 auto
-    padding 90px 0 92px 0
-    @media tablet-landscape-medium
-        width calc(100% - 64px)
-    @media tablet-portrait-small
-        width calc(100% - 40px)
+    width 100%
+    
+    &--index
+        margin 90px 0 0 0
 
     &__heading
         display block
         margin 0 0 36px 0
         text-align center
+        @media tablet-portrait-large
+            text-align left
+
+    &__tabs
+        margin 0 0 71px 0
+        text-align center
+        @media tablet-portrait-large
+            text-align left
 
     &__list
-        display flex
-        flex-direction column
         margin 0
         padding 0
         list-style none
@@ -25,13 +27,13 @@
 
 .branch
     width 100%
-
+    
     &__top
         display flex
         flex-wrap nowrap
         flex-direction row-reverse
         justify-content space-between
-        margin 60px 0 43px 0
+        margin 0 0 43px 0
         @media tablet-portrait-small
             flex-direction column
 
@@ -41,14 +43,13 @@
         height 335px
         border-radius 10px
         overflow hidden
-        @media laptop
-            width calc(100% / 3 - 32px / 1.5)
         @media tablet-portrait-large
-            width calc(50% - 16px)
+            width calc(50% - 18px)
         @media tablet-portrait-small
             width 100%
+            margin 0 0 20px 0
         @media phone
-            height 220px
+            height 300px
 
     &__image
         position absolute
@@ -64,6 +65,8 @@
         height 335px
         border-radius 10px
         overflow hidden
+        @media phone
+            height 300px
 
     &__map
         height 100%
@@ -72,24 +75,20 @@
         display flex
         flex-wrap nowrap
         justify-content space-between
-        @media tablet-portrait-large
-            flex-direction column-reverse
+        @media tablet-portrait-medium
+            flex-direction column
 
     &__col
         &:first-child
             width calc(100% / 3 - 36px / 1.5)
-            @media laptop
-                width calc(100% / 3 - 32px / 1.5)
-            @media tablet-portrait-large
+            @media tablet-portrait-medium
                 width 100%
-                margin 18px 0 0 0
             
         &:last-child
             width calc(100% / 1.5 - 36px / 3)
-            @media laptop
-                width calc(100% / 1.5 - 32px / 3)
-            @media tablet-portrait-large
+            @media tablet-portrait-medium
                 width 100%
+                margin 24px 0 0 0
 
     &__opening-sign
         display inline-block
@@ -105,11 +104,8 @@
 
 .branch__image-wrapper + .branch__map-wrapper
     width calc(100% / 1.5 - 36px / 3)
-    @media laptop
-        width calc(100% / 1.5 - 32px / 3)
     @media tablet-portrait-large
-        width calc(50% - 16px)
+        width calc(50% - 18px)
     @media tablet-portrait-small
         width 100%
-        margin 20px 0 0 0
             

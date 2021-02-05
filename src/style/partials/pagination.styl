@@ -1,0 +1,91 @@
+.pagination
+    display inline-flex
+    flex-wrap nowrap
+
+    &__counter
+        display none
+        @media phone
+            display flex
+            flex-wrap nowrap
+            margin 0 65px
+
+    &__current-page,
+    &__last-page
+        font-family "Spectral"
+        font-size 20px
+        line-height 24px
+        font-weight 300
+        color black
+
+    &__last-page::before
+        content "/"
+        margin 0 30px
+        font-family "Spectral"
+        font-size 20px
+        line-height 24px
+        font-weight 300
+        color black            
+
+    &__list
+        display flex
+        flex-wrap nowrap
+        margin 0 65px
+        padding 0
+        list-style none
+        @media phone
+            display none
+
+    &__item
+        font-family "Spectral"
+        font-size 20px
+        line-height 24px
+        font-weight 300
+        color black
+
+        &--active
+            position relative
+            color white
+            cursor default
+
+            &::before
+                content ""
+                position absolute
+                top -11px
+                left 50%
+                transform translateX(-50%)
+                z-index -1
+                display block
+                width 47px
+                height 47px
+                border-radius 23.5px
+                background-color deep-pink
+
+    &__item + &__item
+        margin 0 0 0 38px
+
+    &__link
+        text-decoration none
+        color inherit
+        border-bottom 1px solid black
+        transition border .3s 0s ease 
+
+        &:hover
+            border-bottom 1px solid transparent
+
+    &__arrow
+        & svg
+            fill none
+            stroke black
+            stroke-width 1.2px
+            stroke-dasharray 30px
+
+        &--disabled
+            opacity .15
+
+.pagination__arrow:not(.pagination__arrow--disabled):hover
+    & svg
+        animation small-arrow-drawing
+        animation-duration 1s
+        animation-timing-function ease
+        animation-iteration-count 1
+    

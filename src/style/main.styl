@@ -22,18 +22,42 @@ body
 
 .main
     flex-grow 1
-    overflow-x hidden
+    overflow hidden
+    padding 0 0 92px 0
+
+.container
+    width calc(100% - 78px)
+    max-width 1440px
+    margin 0 auto
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)
 
 
 
 @import "partials/header.styl"
+@import "partials/inner-intro.styl"
 @import "partials/main-slider.styl"
 @import "partials/search.styl"
 @import "partials/form.styl"
 @import "partials/tabs.styl"
-@import "partials/services.styl"
-@import "partials/company.styl"
+@import "partials/areas.styl"
+@import "partials/advantages.styl"
 @import "partials/news.styl"
 @import "partials/reviews.styl"
 @import "partials/branches.styl"
+@import "partials/default.styl"
+@import "partials/pagination.styl"
+@import "partials/company.styl"
+@import "partials/contacts.styl"
+@import "partials/workers.styl"
+@import "partials/questions.styl"
+@import "partials/leave-review.styl"
+@import "partials/ask-question.styl"
+@import "partials/reception.styl"
+@import "partials/tags.styl"
+@import "partials/anchors-menu.styl"
+@import "partials/links.styl"
 @import "partials/footer.styl"
+@import "partials/popup.styl"

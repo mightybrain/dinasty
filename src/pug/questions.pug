@@ -1,0 +1,130 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |О нас
+                            li.breadcrumbs__item
+                                |Вопрос-ответ
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Вопрос-ответ
+                section.questions
+                    button.common__button.common__button--medium.questions__scroll-button.js-bubble-hover.js-scroll-button(data-target="ask-question")
+                        |Задать вопрос
+                    ul.questions__list
+                        li.questions__item
+                            div.question.js-drop-down-question
+                                button.question__state-button.js-question-state-button
+                                div.question__info
+                                    p.question__text.js-question-text.js-question-state-button
+                                        |В ваших клиниках можно вызвать терапевта на дом? В ваших клиниках можно вызвать терапевта на дом?
+                                    div.common__wysiwyg.question__answer.js-question-answer
+                                        p
+                                            |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                        p
+                                            |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                        li.questions__item
+                            div.question.js-drop-down-question
+                                button.question__state-button.js-question-state-button
+                                div.question__info
+                                    p.question__text.js-question-text.js-question-state-button
+                                        |Можно ли связаться с лечащим врачем не посещая поликлинику?
+                                    div.common__wysiwyg.question__answer.js-question-answer
+                                        p
+                                            |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                        li.questions__item
+                            div.question.js-drop-down-question
+                                button.question__state-button.js-question-state-button
+                                div.question__info
+                                    p.question__text.js-question-text.js-question-state-button
+                                        |Если я записываюсь на прием к терапевту, сколько вреимени в моем распоряжении, чтобы задать все вопросы?
+                                    div.common__wysiwyg.question__answer.js-question-answer
+                                        p
+                                            |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                        li.questions__item
+                            div.question.js-drop-down-question
+                                button.question__state-button.js-question-state-button
+                                div.question__info
+                                    p.question__text.js-question-text.js-question-state-button
+                                        |В ваших клиниках можно вызвать терапевта на дом?
+                                    div.common__wysiwyg.question__answer.js-question-answer
+                                        p
+                                            |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                        p
+                                            |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                        li.questions__item
+                            div.question.js-drop-down-question
+                                button.question__state-button.js-question-state-button
+                                div.question__info
+                                    p.question__text.js-question-text.js-question-state-button
+                                        |Потерялся рецепт. Можно ли получить повторно, не посещая клинику?
+                                    div.common__wysiwyg.question__answer.js-question-answer
+                                        p
+                                            |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                    div.questions__ask-question(data-anchor="ask-question")
+                        section.ask-question
+                            h2.common__h2-heading.ask-question__heading
+                                |Задать вопрос
+                            div.common__wysiwyg.ask-question__description
+                                p
+                                    |Обратите внимание, поля со звездочкой 
+                                    span.common__req-sign
+                                        |* 
+                                    |– обязательны для заполнения.
+                            form.form.form--centered
+                                div.form__cols
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |ФИО
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="name" data-req)
+                                        div.form__group
+                                            label.form__label
+                                                |Телефон
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="phone" data-req)
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Текст вопроса
+                                                span.form__req-sign
+                                                    |*
+                                            textarea.form__textarea(name="" data-type="textarea" data-req)
+                                div.form__group.form__group--checkbox
+                                    label.form__label
+                                        input.form__checkbox(type="checkbox" data-req)
+                                        div.form__custom-checkbox
+                                        |Согласен на обработку 
+                                        a.form__label-link(href="")
+                                            |персональных данных
+                                button.common__button.common__button--medium.form__submit-button.js-bubble-hover(type="submit")
+                                    span
+                                        |Отправить вопрос                         
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")

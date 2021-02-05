@@ -1,0 +1,444 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Услуги и цены
+                            li.breadcrumbs__item
+                                |Терапевт
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Терапевт
+                section.area
+                    div.area__foreword
+                        img.area__foreword-image(src="images/media/therapist-image-01.jpg", alt="")
+                        div.area__foreword-description
+                            p
+                                |Терапевт – это врач широкого профиля, специализирующийся на ранней диагностике множества заболеваний. Терапевт ведет первичный прием и лечение пациентов, а при необходимости дает направление к более узкоспециализированному специалисту.
+                            p
+                                |Если вы не знаете, к какому врачу обратиться, то начать нужно именно с терапевта.
+                    div.area__navigation.js-sticky-container
+                        div.area__anchors-menu.js-sticky
+                            section.anchors-menu
+                                ul.anchors-menu__list
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="description")
+                                            |Об отделении
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="price")
+                                            |Цены
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="reception")
+                                            |Записаться на прием
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="questions")
+                                            |Вопрос-ответ
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="reviews")
+                                            |Отзывы
+                                    li.anchors-menu__item
+                                        button.anchors-menu__button.js-scroll-button(data-target="workers")
+                                            |Специалисты
+                    div.area__description(data-anchor="description")
+                        div.common__wysiwyg
+                            h2
+                                |Об отделении
+                            p
+                                |Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие.
+                            p
+                                |Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.
+                    div.area__workers(data-anchor="workers")
+                        h2.common__h2-heading.area__workers-heading
+                            |Специалисты направления
+                        section.workers
+                            ul.workers__list
+                                li.workers__item
+                                    div.worker-preview
+                                        div.worker-preview__image-wrapper
+                                            a.worker-preview__link(href="")
+                                                img.worker-preview__image(src="images/media/doctor-image-01.jpg", alt="")
+                                        span.worker-preview__name
+                                            a.worker-preview__link(href="")
+                                                span
+                                                    |Чаленко
+                                                br
+                                                |Татьяна Владимировна      
+                                        div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                            ul.tags__list
+                                                li.tags__item
+                                                    |Главный врач
+                                li.workers__item
+                                    div.worker-preview
+                                        div.worker-preview__image-wrapper
+                                            a.worker-preview__link(href="")
+                                                img.worker-preview__image(src="images/media/doctor-image-02.jpg", alt="")
+                                        span.worker-preview__name
+                                            a.worker-preview__link(href="")
+                                                span
+                                                    |Масаева
+                                                br
+                                                |Анна Геннадьевна    
+                                        div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                            ul.tags__list
+                                                li.tags__item
+                                                    |Старший администратор
+                                li.workers__item
+                                    div.worker-preview
+                                        div.worker-preview__image-wrapper
+                                            a.worker-preview__link(href="")
+                                                img.worker-preview__image(src="images/media/doctor-image-03.jpg", alt="")
+                                        span.worker-preview__name
+                                            a.worker-preview__link(href="")
+                                                span
+                                                    |Дмитриева
+                                                br
+                                                |Надежда Александровна     
+                                        div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                            ul.tags__list
+                                                li.tags__item
+                                                    |Педиатр
+                                                li.tags__item
+                                                    |Гастроэнтеролог
+                                li.workers__item
+                                    div.worker-preview
+                                        div.worker-preview__image-wrapper
+                                            a.worker-preview__link(href="")
+                                                img.worker-preview__image(src="images/media/doctor-image-04.jpg", alt="")
+                                        span.worker-preview__name
+                                            a.worker-preview__link(href="")
+                                                span
+                                                    |Кузьмина
+                                                br
+                                                |Светлана Евгеньевна      
+                                        div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                            ul.tags__list
+                                                li.tags__item
+                                                    |Акушер-гинеколог
+                        div.area__workers-link-wrapper
+                            a.common__link.common__link--large.area__workers-link(href="")
+                                |Все специалисты направления
+                    div.area__timetable
+                        div.common__wysiwyg.area__timetable-description
+                            h2
+                                |Расписание приема
+                            p
+                                |Специалисты отделения ведут прием с понедельника по пятницу с 08:00 до 13:00.
+                    div.area__price(data-anchor="price")
+                        h2.common__h2-heading.area__price-heading
+                                |Стоимость услуг
+                        div.area__services
+                            h4.common__h4-heading.area__services-heading
+                                |Консультации
+                            ul.area__services-list
+                                li.area__services-item
+                                    span.area__services-title
+                                        |Консультация врача-терапевта, инфекциониста Малкиной О.И.
+                                    span.area__services-price
+                                        |1400 руб
+                                li.area__services-item
+                                    span.area__services-title
+                                        |Консультация врача-терапевта, гастроэнтеролога Заплатиной Н.И.
+                                    span.area__services-price
+                                        |1400 руб
+                                li.area__services-item
+                                    span.area__services-title
+                                        |Консультация врача-терапевта, кардиолога ВагановойА.В
+                                    span.area__services-price
+                                        |1500 руб
+                        div.area__services
+                            h4.common__h4-heading.area__services-heading
+                                |Вызов на дом
+                            ul.area__services-list
+                                li.area__services-item
+                                    span.area__services-title
+                                        |Выезд в пределах Екатеринбурга
+                                    span.area__services-price
+                                        |3000 руб
+                                li.area__services-item
+                                    span.area__services-title
+                                        |Выезд за черту города, в пределах 40 км.
+                                    span.area__services-price
+                                        |4000 руб
+                    div.area__reception(data-anchor="reception")
+                        section.reception
+                            h2.common__h2-heading.reception__heading
+                                |Записаться на прием
+                            div.common__wysiwyg.reception__description
+                                p
+                                    |Обратите внимание, поля со звездочкой 
+                                    span.common__req-sign
+                                        |* 
+                                    |– обязательны для заполнения.
+                            form.form.form--centered
+                                div.form__row
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Клиника
+                                                span.form__req-sign
+                                                    |*
+                                            select.js-choices(data-type="select" data-req)
+                                                option(value="")
+                                                    |Клиника на Мамина Сибиряка, 128
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Услуга
+                                                span.form__req-sign
+                                                    |*
+                                            select.js-choices(data-type="select" data-req)
+                                                option(value="")
+                                                    |Прием терапевта
+                                div.form__row
+                                    div.form__col
+                                       div.form__group
+                                            label.form__label
+                                                |ФИО
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="name" data-req)
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Телефон
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="phone" data-req)
+                                div.form__group.form__group--checkbox
+                                    label.form__label
+                                        input.form__checkbox(type="checkbox" data-req)
+                                        div.form__custom-checkbox
+                                        |Согласен на обработку 
+                                        a.form__label-link(href="")
+                                            |персональных данных
+                                button.common__button.common__button--medium.form__submit-button.js-bubble-hover(type="submit")
+                                    span
+                                        |Записаться
+                    div.area__reviews(data-anchor="reviews")
+                        section.reviews.reviews--slider
+                            h2.common__h2-heading.reviews__heading
+                                |Отзывы
+                            div.reviews-slider.swiper-container.js-reviews-slider
+                                ul.reviews-slider__list.swiper-wrapper
+                                    li.reviews-slider__item.swiper-slide
+                                        div.reviews-slider__info
+                                            span.reviews-slider__date
+                                                |30.01.2020
+                                            span.reviews-slider__author
+                                                |Дмитрий
+                                            div.common__wysiwyg.reviews-slider__description
+                                                p
+                                                    |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                                p
+                                                    |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                                        button.common__button.reviews-slider__button.js-bubble-hover
+                                            span
+                                                |Читать полностью
+                                    li.reviews-slider__item.swiper-slide
+                                        div.reviews-slider__info
+                                            span.reviews-slider__date
+                                                |17.03.2020
+                                            span.reviews-slider__author
+                                                |Мария
+                                            div.common__wysiwyg.reviews-slider__description
+                                                p
+                                                    |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                                p
+                                                    |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                                        button.common__button.reviews-slider__button.js-bubble-hover
+                                            span
+                                                |Читать полностью
+                                    li.reviews-slider__item.swiper-slide
+                                        div.reviews-slider__info
+                                            span.reviews-slider__date
+                                                |30.01.2020
+                                            span.reviews-slider__author
+                                                |Дмитрий
+                                            div.common__wysiwyg.reviews-slider__description
+                                                p
+                                                    |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                                p
+                                                    |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                                        button.common__button.reviews-slider__button.js-bubble-hover
+                                            span
+                                                |Читать полностью
+                                    li.reviews-slider__item.swiper-slide
+                                        div.reviews-slider__info
+                                            span.reviews-slider__date
+                                                |17.03.2020
+                                            span.reviews-slider__author
+                                                |Мария
+                                            div.common__wysiwyg.reviews-slider__description
+                                                p
+                                                    |Здравствуйте, хочу выразить огромную благодарность Шмелевой Ирине Владимировне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже. Грамотный и отзывчивый специалист, смогла найти контакт. Даже проблемы не медицинского характера, а бытового, в нерабочее время помогает решать. За всё время лечения не встретили от нее ни одного грубого слова. Всегда подскажет, поддержит. Назначит правильные лекарства, хорошее лечение, всегда интересуется, как протекает выздоровление.
+                                                p
+                                                    |Желаем Ирине Владимировне долгих лет работы с нами – женщинами, разрешения наших проблем, хорошего настроения и здоровья. С благодарностью, Мария.
+                                        button.common__button.reviews-slider__button.js-bubble-hover
+                                            span
+                                                |Читать полностью
+                                div.reviews-slider__arrows
+                                    div.reviews-slider__arrow.js-reviews-slider-arrow-left
+                                        svg(width="20" height="37")
+                                            use(xlink:href="#arrow-left")
+                                    div.reviews-slider__arrow.js-reviews-slider-arrow-right
+                                        svg(width="20" height="37")
+                                            use(xlink:href="#arrow-right")
+                            div.reviews__link-wrapper
+                                a.common__link.common__link--large.reviews__link(href="")
+                                    |Все отзывы
+                    div.area__questions(data-anchor="questions")
+                        h2.common__h2-heading.area__questions-heading
+                            |Вопрос-ответ
+                        section.questions
+                            ul.questions__list
+                                li.questions__item
+                                    div.question.js-drop-down-question
+                                        button.question__state-button.js-question-state-button
+                                        div.question__info
+                                            p.question__text.js-question-text.js-question-state-button
+                                                |В ваших клиниках можно вызвать терапевта на дом? В ваших клиниках можно вызвать терапевта на дом?
+                                            div.common__wysiwyg.question__answer.js-question-answer
+                                                p
+                                                    |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                                p
+                                                    |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                                li.questions__item
+                                    div.question.js-drop-down-question
+                                        button.question__state-button.js-question-state-button
+                                        div.question__info
+                                            p.question__text.js-question-text.js-question-state-button
+                                                |Можно ли связаться с лечащим врачем не посещая поликлинику?
+                                            div.common__wysiwyg.question__answer.js-question-answer
+                                                p
+                                                    |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                                li.questions__item
+                                    div.question.js-drop-down-question
+                                        button.question__state-button.js-question-state-button
+                                        div.question__info
+                                            p.question__text.js-question-text.js-question-state-button
+                                                |Если я записываюсь на прием к терапевту, сколько вреимени в моем распоряжении, чтобы задать все вопросы?
+                                            div.common__wysiwyg.question__answer.js-question-answer
+                                                p
+                                                    |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                li.questions__item
+                                    div.question.js-drop-down-question
+                                        button.question__state-button.js-question-state-button
+                                        div.question__info
+                                            p.question__text.js-question-text.js-question-state-button
+                                                |В ваших клиниках можно вызвать терапевта на дом?
+                                            div.common__wysiwyg.question__answer.js-question-answer
+                                                p
+                                                    |Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. Здравствуйте. Все наши врачи обладают высокой квалификацией и большим опытом, что зачастую является залогом точной постановки диагноза и эффективного лечения.
+                                                p
+                                                    |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                                li.questions__item
+                                    div.question.js-drop-down-question
+                                        button.question__state-button.js-question-state-button
+                                        div.question__info
+                                            p.question__text.js-question-text.js-question-state-button
+                                                |Потерялся рецепт. Можно ли получить повторно, не посещая клинику?
+                                            div.common__wysiwyg.question__answer.js-question-answer
+                                                p
+                                                    |Здравствуйте. Да, вы можете вызвать врача на дом в пределах Екатеринбурга, или за пределы города до 40 км. 
+                        div.area__questions-link-wrapper
+                            a.common__link.common__link--large.area__questions-link(href="")
+                                |Все вопросы об услуге
+                    div.area__seo
+                        div.common__wysiwyg
+                            h2
+                                |Об отделении
+                            p
+                                |Может показаться, что роль данного врача – лишь координация пациентов к специалистам более узкого профиля. Это не так. Терапевты диагностируют и лечат инфекционные, сердечно-сосудистые заболевания, болезни органов дыхания, пищеварения, мочевыделения, эндокринной системы и другие.
+                            p
+                                |Широкая специализация позволяет видеть клиническую картину в целом и уметь отличать признаки от причин заболевания. Например, проблемы с кожей (сфера дерматовенерологов) нередко вызваны проблемами с кишечником (специализация гастроэнтерологов). Даже если терапевт не будет лечить заболевание сам, он направит вас к специалисту максимально точно, что особенно важно при заболеваниях, способных переходить из острой формы в хроническую.
+                    div.area__links
+                        section.links
+                            ul.links__list
+                                li.links__item
+                                    img.links__image(src="images/media/link-image-01.jpg", alt="")
+                                    a.common__link.common__link--large.links__link(href="")
+                                        |Лечение
+                                li.links__item
+                                    img.links__image(src="images/media/link-image-02.jpg", alt="")
+                                    a.common__link.common__link--large.links__link(href="")
+                                        |Диагностика
+                                li.links__item
+                                    img.links__image(src="images/media/link-image-03.jpg", alt="")
+                                    a.common__link.common__link--large.links__link(href="")
+                                        |Программы
+                    div.area__branches
+                        h2.common__h2-heading.area__branches-heading
+                            |Наши отделения
+                        section.branches
+                            div.branches__tabs.js-tabs(data-tabs="branches")
+                                div.tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            button.tabs__button(data-tab="branch-01")
+                                                |ул. Мамина-Сибиряка, 128
+                                        li.tabs__item
+                                            button.tabs__button(data-tab="branch-02")
+                                                |ул. Академика Шварца, 14
+                            ul.branches__list(data-tabs-content="branches")
+                                li.branches__item(data-tab-content="branch-01")
+                                    div.branch
+                                        div.branch__top
+                                            div.branch__image-wrapper
+                                                img.branch__image(src="images/branches/branch-01.jpg", alt="")
+                                            div.branch__map-wrapper
+                                                div.branch__map.js-branch-map(data-branch="mamsib")
+                                        div.branch__bottom
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__work-hours
+                                                    p
+                                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                                span.branch__opening-sign
+                                                    |Сейчас открыто
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__description
+                                                    p
+                                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                                    p
+                                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+                                li.branches__item(data-tab-content="branch-02")
+                                    div.branch
+                                        div.branch__top
+                                            div.branch__map-wrapper
+                                                div.branch__map.js-branch-map(data-branch="akshv")
+                                        div.branch__bottom
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__work-hours
+                                                    p
+                                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                                span.branch__opening-sign
+                                                    |Сейчас открыто
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__description
+                                                    p
+                                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                                    p
+                                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")

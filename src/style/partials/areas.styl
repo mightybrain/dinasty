@@ -1,0 +1,334 @@
+.areas
+    &--index
+        margin 90px 0 103px 0
+
+    &__heading
+        display block
+        margin 0 0 36px 0
+        text-align center
+        @media tablet-portrait-large
+            text-align left
+
+    &__tabs
+        margin 0 0 71px 0
+        text-align center
+        @media tablet-portrait-large
+            text-align left
+
+    &__list
+        display flex
+        flex-wrap wrap
+        width calc(100% + 36px)
+        margin 0 0 -36px -36px
+        padding 0
+        list-style none
+        @media tablet-portrait-small
+            width 100%
+            margin 0 0 -20px 0
+
+    &__item
+        position relative
+        box-sizing border-box
+        width calc(100% / 3 - 36px)
+        margin 0 0 36px 36px
+        min-height 186px
+        padding 43px 150px 43px 50px
+        border 1px solid light-gray
+        border-radius 10px
+        overflow hidden
+        @media tablet-landscape-medium
+            width calc(100% / 2 - 36px)
+        @media tablet-portrait-medium
+            padding 23px 130px 23px 30px
+        @media tablet-portrait-small
+            width 100%
+            margin 0 0 20px 0
+
+        & .bubble-container
+            opacity .1
+
+        & .bubble
+            background-color middle-gray
+            animation-duration .75s
+
+    &__icon
+        position absolute
+        top 20px
+        right 20px
+        display block
+        width 180px
+        height 180px
+        opacity .35
+
+    &__link
+        position relative
+        font-family "Spectral"
+        font-size 26px
+        line-height 32px
+        font-weight 300
+        color black
+        text-decoration none
+        border-bottom 1px solid black
+        outline none
+        transition border .3s 0s ease
+        @media tablet-portrait-large
+            font-size 22px
+            line-height 26px 
+
+        &:hover
+            border-bottom 1px solid transparent
+
+.areas--index
+    & .areas__tabs
+        margin 0 0 79px 0
+        
+    & .areas
+        &__list
+            margin 0 0 -40px -36px
+            @media tablet-portrait-small
+                width calc(100% + 20px)
+                margin 0 0 -40px -20px
+            @media phone
+                margin 0 0 -40px 0
+
+        &__item
+            width calc(100% / 4 - 36px)
+            min-height auto
+            margin 0 0 40px 36px
+            padding 0
+            border none
+            border-radius 0
+            overflow visible
+            @media tablet-landscape-small
+                width calc(100% / 3 - 36px)
+            @media tablet-portrait-medium
+                width calc(100% / 2 - 36px)
+            @media tablet-portrait-small
+                width calc(100% / 2 - 20px)
+                margin 0 0 40px 20px
+            @media phone
+                width 100%
+                margin 0 0 40px 0
+
+        &__icon
+            left 0px
+            top 50%
+            transform translateY(-50%)
+            width 44px
+            height 44px
+            opacity 1
+
+        &__link
+            left 62px
+            top 50%
+            transform translateY(-50%)
+            display inline-block
+            width calc(100% - 62px)
+            font-size 18px
+            line-height 22px
+            border none
+            transition color .3s 0s ease
+
+            &:hover
+                color bright-pink
+
+.areas__list.js-content-is-hidden
+    display none
+
+.area
+    &__foreword
+        position relative
+        box-sizing border-box
+        width 100%
+        min-height 560px
+        padding 42px 50px 49px 50px
+        overflow hidden
+        border-radius 10px
+        @media tablet-portrait-large
+            min-height 0
+            margin 0 0 93px 0
+            padding 0
+            border-radius 0
+            overflow visible
+
+        &-image
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            display block
+            width 101%
+            height 101%
+            object-fit cover
+            @media tablet-portrait-large
+                display none
+
+        &-description
+            position relative
+            max-width 480px
+            @media tablet-portrait-large
+                max-width none
+
+            & p:not([class])
+                margin 0
+                font-family "Spectral"
+                font-size 22px
+                line-height 32px
+                font-weight 300
+                color black
+                @media tablet-portrait-large
+                    font-size 18px
+                    line-height 26px
+
+            & p:not([class]) + p:not([class])
+                margin 24px 0 0 0
+
+    &__navigation
+        text-align center
+        margin 0 auto 56px auto
+        @media tablet-portrait-large
+            display none
+
+    &__description
+        max-width 1052px
+        margin 0 auto
+
+    &__workers
+        display flex
+        flex-direction column
+        margin 84px 0 0 0
+
+        &-heading
+            margin 0 0 38px 0
+            align-self center
+            @media tablet-portrait-large
+                align-self flex-start
+
+        &-link-wrapper
+            margin 39px 0 0 0
+            align-self center
+            @media tablet-portrait-large
+                align-self flex-start
+
+    &__timetable
+        box-sizing border-box
+        margin 92px 0 0 0
+        padding 62px 50px
+        background-color lightest-gray
+        border-radius 10px
+        @media tablet-portrait-medium
+            padding 42px 30px
+
+        &-description
+            max-width 1052px
+            margin 0 auto
+
+    &__price
+        max-width 1052px
+        margin 92px auto 0 auto
+
+        &-heading
+            margin 0 0 32px 0
+
+    &__services
+        &-heading
+            margin 0 0 23px 0
+
+        &-list
+            margin 0
+            padding 0
+            list-style none
+
+        &-item
+            display flex
+            flex-wrap nowrap
+            box-sizing border-box
+            padding 19px 25px 17px 25px
+            font-family "Spectral"
+            font-size 18px
+            line-height 26px
+            font-weight 300
+            color black
+            @media phone
+                flex-direction column
+
+            &:nth-child(odd)
+                background-color lightest-gray
+                border-radius 10px
+
+        &-title
+            box-sizing border-box
+            width 75%
+            padding 0 36px 0 0
+            @media phone
+                width 100%
+                padding 0
+
+        &-price
+            margin 0 0 0 auto
+            @media phone
+                margin 10px 0 0 0
+
+    &__services + &__services
+        margin 44px 0 0 0
+
+    &__reception
+        margin 100px 0 0 0
+        @media phone
+            width 100vw
+            margin 100px 0 0 -20px
+
+    &__reviews
+        margin 100px 0 0 0
+
+    &__questions
+        display flex
+        flex-direction column
+        margin 92px 0 0 0
+
+        &-heading
+            margin 0 0 38px 0
+            align-self center
+            @media tablet-portrait-large
+                align-self flex-start
+
+        &-link-wrapper
+            margin 44px 0 0 0
+            align-self center
+            @media tablet-portrait-large
+                align-self flex-start
+
+    &__seo
+        max-width 1052px
+        margin 84px auto 0 auto
+
+    &__links
+        margin 92px auto 0 auto
+
+    &__branches
+        display flex
+        flex-direction column
+        margin 92px 0 0 0
+
+        &-heading
+            margin 0 0 38px 0
+            align-self center
+            @media tablet-portrait-large
+                align-self flex-start
+
+.area__foreword + .area__navigation
+    position relative
+    top -36px
+
+.area__anchors-menu.js-is-stick
+    position fixed
+    top 20px
+    left 50%
+    transform translateX(-50%)
+    z-index 2
+    width calc(100% - 78px)
+    max-width 1440px
+    @media tablet-landscape-medium
+        width calc(100% - 64px)
+    @media tablet-portrait-small
+        width calc(100% - 40px)

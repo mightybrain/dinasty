@@ -1,6 +1,57 @@
 section.hidden-block
     div.hidden-block__background
-    button.hidden-block__close-button.js-close-popup-button
     div.hidden-block__container
-        section.project-popup.hidden-block__popup(data-popup="project")
+        div.hidden-block__popup(data-popup="reception")
+            section.popup
+                button.popup__close-button.js-close-popup-button
+                h2.common__h2-heading.popup__heading
+                    |Записаться на прием
+                div.common__wysiwyg.popup__description
+                    p
+                        |Обратите внимание, поля со звездочкой 
+                        span.common__req-sign
+                            |* 
+                        |– обязательны для заполнения.
+                form.form
+                    div.form__group
+                        label.form__label
+                            |Клиника
+                            span.form__req-sign
+                                |*
+                        select.js-choices(name="" data-type="select" data-req)
+                            option(value="")
+                                |Клиника на Мамина Сибиряка, 128
+                    div.form__group
+                        label.form__label
+                            |Услуга
+                            span.form__req-sign
+                                |*
+                        select.js-choices(name="" data-type="select" data-req)
+                            option(value="")
+                                |Прием терапевта
+                            option(value="")
+                                |Прием физиотерапевта
+                    div.form__group
+                        label.form__label
+                            |ФИО
+                            span.form__req-sign
+                                |*
+                        input.form__input(type="text" data-content="name" data-req)
+                    div.form__group
+                        label.form__label
+                            |Телефон
+                            span.form__req-sign
+                                |*
+                        input.form__input(type="text" data-content="phone" data-req)
+                    div.form__group.form__group--checkbox
+                        label.form__label
+                            input.form__checkbox(type="checkbox" data-req)
+                            div.form__custom-checkbox
+                            |Согласен на обработку 
+                            a.form__label-link(href="")
+                                |персональных данных
+                    button.common__button.common__button--medium.form__submit-button.js-bubble-hover(type="submit")
+                        span
+                            |Записаться                
+            
             

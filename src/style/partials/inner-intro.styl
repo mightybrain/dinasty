@@ -1,0 +1,78 @@
+.inner-intro
+    position relative
+    z-index 1
+    padding 97px 0 56px 0
+
+    &--half
+        padding 152px 0 37px 0
+        @media tablet-portrait-large
+            padding 97px 0 56px
+
+    &__breadcrumbs
+        max-width 1052px
+        margin 0 auto 25px auto
+        @media tablet-portrait-small
+            display none
+
+    &__heading-wrapper
+        max-width 1052px
+        margin 0 auto
+
+.breadcrumbs
+    &__list
+        display flex
+        flex-wrap wrap
+        margin 0 0 -8px 0
+        padding 0
+        list-style none
+
+    &__item
+        margin 0 0 8px 0
+        font-family "Spectral"
+        font-size 14px
+        line-height 18px
+        font-weight 300
+        color gray
+        white-space nowrap
+
+        &:not(:last-child)::after
+            content "/"
+            display inline-block
+            margin 0 7px
+            font-family "Spectral"
+            font-size 14px
+            line-height 18px
+            font-weight 300
+            color gray   
+
+    &__link
+        text-decoration none
+        color inherit
+        border-bottom 1px solid gray
+        transition border .3s 0s ease 
+
+        &:hover
+            border-bottom 1px solid transparent
+
+.inner-intro--centered
+    & .breadcrumbs__list
+        justify-content center
+        @media tablet-portrait-large
+            justify-content flex-start
+
+    & .inner-intro__heading-wrapper
+        text-align center
+        @media tablet-portrait-large
+            text-align left
+
+.inner-intro--half
+    & .breadcrumbs__list
+        width calc(50% - 18px)
+        @media tablet-portrait-large
+            width 100%
+
+    & .inner-intro__heading
+        display block
+        width calc(50% - 18px)
+        @media tablet-portrait-large
+            width 100%

@@ -2,7 +2,7 @@
     position fixed
     top 0
     left 0
-    z-index 2
+    z-index 4
     width 0
     height 100vh
     overflow hidden
@@ -14,50 +14,9 @@
         left 0
         width 100%
         height 100%
-        background-color black
+        background-color white
         opacity 0
         transition opacity 1s 0s ease
-
-    &__close-button
-        position absolute
-        top 33px
-        right 33px
-        transform rotate(0deg)
-        z-index 1
-        width 33px
-        height 33px
-        background none
-        border none
-        opacity 0
-        visibility hidden
-        transition transform .5s 0s ease, opacity .5s 0s ease, visibility 0s .5s linear
-        outline none
-        cursor pointer
-
-        &:hover
-            transform rotate(90deg)
-
-        &::before
-            content ""
-            position absolute
-            top 16px
-            left 0
-            display block
-            width 100%
-            height 1px
-            background-color white
-            transform rotate(-45deg)
-
-        &::after
-            content ""
-            position absolute
-            top 16px
-            left 0
-            display block
-            width 100%
-            height 1px
-            background-color white
-            transform rotate(45deg)
 
     &__container
         position relative
@@ -70,9 +29,69 @@
         overflow-x hidden
         opacity 0
         visibility hidden
+        @media tablet-portrait-large
+            width 100%
 
     &__popup
         display none
+        width calc(100% - 40px)
+        max-width 628px
+        margin 100px 0
+
+.popup
+    position relative
+    box-sizing border-box
+    padding 62px 50px 69px 50px
+    border-radius 10px
+    background-color white
+    box-shadow 5px 0 30px rgba(0 0 0 .15)
+    @media tablet-portrait-medium
+        padding 42px 30px 49px 30px
+
+    &__close-button
+        position absolute
+        top 26px
+        right 26px
+        transform rotate(0deg)
+        z-index 1
+        width 28px
+        height 28px
+        background none
+        border none
+        transition transform .5s 0s ease
+        outline none
+        cursor pointer
+
+        &:hover
+            transform rotate(90deg)
+
+        &::before
+            content ""
+            position absolute
+            top 14px
+            left 0
+            display block
+            width 100%
+            height 1px
+            background-color black
+            transform rotate(-45deg)
+
+        &::after
+            content ""
+            position absolute
+            top 14px
+            left 0
+            display block
+            width 100%
+            height 1px
+            background-color black
+            transform rotate(45deg)
+
+    &__heading
+        margin 0 0 31px 0
+
+    &__description
+        margin 0 0 33px 0
 
 body.js-popup-is-open
     overflow-y hidden
@@ -84,15 +103,10 @@ body.js-popup-is-open
         &__background
             opacity 1
 
-        &__close-button
-            opacity 1
-            visibility visible
-            transition transform .5s 0s ease, opacity .5s 1s ease, visibility 0s 1s linear
-
         &__container
             opacity 1
             visibility visible
             transition opacity 1s 1s ease, visibility 0s 1s linear  
 
-.hidden-block__popup.js-popup-is-active
+.hidden-block__popup.js-active-popup
     display block

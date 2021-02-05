@@ -1,0 +1,121 @@
+.questions
+    display flex
+    flex-direction column
+    width 100%
+
+    &__list
+        max-width 1052px
+        margin 0 auto
+        padding 0
+        list-style none
+
+    &__item + &__item
+        margin 10px 0 0 0
+
+    &__scroll-button
+        align-self center
+        margin 0 0 60px 0
+        @media tablet-portrait-large
+            align-self flex-start
+
+    &__ask-question
+        margin 77px 0 0 0
+        @media phone
+            width 100vw
+            margin 77px 0 0 -20px
+
+.question
+    position relative
+    box-sizing border-box
+    width 100%
+    height auto
+    padding 44px 50px 42px 50px
+    border 1px solid light-gray
+    border-radius 10px
+    overflow hidden
+    transition height .5s .5s ease
+    @media tablet-portrait-medium
+        padding 24px 30px 22px 30px
+
+    &--opened
+        transition height .5s 0s ease
+
+    &__state-button
+        position absolute
+        top 44px
+        right 43px
+        transform rotate(0deg)
+        width 29px
+        height 29px
+        padding 0
+        border none
+        background none
+        cursor pointer
+        outline none
+        transition transform .3s 0s ease
+        @media tablet-portrait-medium
+            top 24px
+            right 23px
+        @media tablet-portrait-small
+            display none
+
+        &::before
+            content ""
+            position absolute
+            top 14px
+            left 0
+            display block
+            width 100%
+            height 1px
+            background-color black
+
+        &::after
+            content ""
+            position absolute
+            top 0
+            left 14px
+            display block
+            width 1px
+            height 100%
+            background-color black
+
+    &__info
+        position relative
+        width calc(100% - 79px)
+        @media tablet-portrait-small
+            width 100%
+
+    &__text
+        display inline
+        margin 0
+        font-family "Spectral"
+        font-size 26px
+        line-height 30px
+        font-weight 300
+        color black
+        border-bottom 1px dotted black
+        transition border .3s 0s ease 
+        cursor pointer
+        @media tablet-portrait-large
+            font-size 22px
+            line-height 26px
+
+        &:hover
+            border-bottom 1px dotted transparent
+
+    &__answer
+        position absolute
+        top 100%
+        padding 21px 0 0 0
+        opacity 0
+        visibility hidden
+        transition opacity .5s 0s ease, visibility 0s .5s linear
+
+.question--opened
+    & .question__state-button
+        transform rotate(45deg)
+
+    & .question__answer
+        opacity 1
+        visibility visible
+        transition opacity .5s .5s ease, visibility 0s .5s linear

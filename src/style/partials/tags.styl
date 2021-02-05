@@ -1,0 +1,58 @@
+.tags
+    &__list
+        display flex
+        flex-wrap wrap
+        margin 0 0 -10px 0
+        padding 0
+        list-style none
+
+    &__item
+        box-sizing border-box
+        margin 0 10px 10px 0
+        padding 5px 15px 3px 15px
+        font-family "Spectral"
+        font-size 14px
+        line-height 18px
+        font-weight 300
+        color gray
+        background-color white
+        border 1px solid middle-gray
+        border-radius 14px
+        transition background-color .3s 0s ease 
+
+        &:hover
+            background-color lightest-gray
+
+        &:last-child
+            margin 0 0 10px 
+            
+    &__link
+        text-decoration none
+        color inherit
+
+.tags--large
+    & .tags__item
+        padding 6px 24px 5px 24px
+        font-size 18px
+        line-height 26px
+        border-radius 19.5px
+
+.tags--centered
+    & .tags__list
+        justify-content center
+        @media tablet-portrait-large
+            justify-content flex-start
+
+    & .tags__item
+        margin 0 10px 10px 10px
+        @media tablet-portrait-large
+            margin 0 20px 10px 0
+
+.tags--no-border
+    & .tags__item
+        padding 0
+        background none
+        border none
+
+        &:hover
+            background-color rgba(255 255 255 0)

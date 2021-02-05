@@ -1,0 +1,162 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                |О клинике
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |О клинике
+                article.company
+                    div.company__row
+                        div.company__cols
+                            div.company__col
+                                div.common__wysiwyg.company__description
+                                    h4
+                                        |«Династия» – это простые, удобные и современные клиники. Мы работаем больше 13 лет.
+                                    p
+                                        |Мы стремимся быть лучшими в сфере своей деятельности и обладать безупречной репутацией на рынке медицинских услуг.
+                            div.company__col
+                                div.company__image-wrapper
+                                    img.company__image(src="images/media/company-image-01.jpg", alt="")
+                    div.company__row
+                        div.company__cols
+                            div.company__col
+                                div.common__wysiwyg.company__description
+                                    h4
+                                        |Более 40 лучших врачей разных специальностей и более 20 медицинских сестер с «золотыми руками».
+                                    a.common__link.common__link--large(href="")
+                                        |Специалисты
+                            div.company__col
+                                div.company__image-wrapper
+                                    img.company__image(src="images/media/company-image-02.jpg", alt="")
+                    div.company__row
+                        div.common__wysiwyg.company__description
+                            h4
+                                |«Династия» – это медицинская помощь для всех членов вашей семьи, независимо от возраста и пола.
+                        div.company__cols
+                            div.company__col
+                                div.common__wysiwyg.company__description
+                                    h4
+                                        |Детская медицинская помощь в семейных клиниках «Династия»
+                                    ul
+                                        li
+                                            |Прием врачей всех детских специальностей,
+                                        li
+                                            |наблюдение детей с рождения,
+                                        li
+                                            |вакцинация детей с рождения, в том числе туберкулинодиагностика,
+                                        li
+                                            |отделение физиотерапии для детей в центре города,
+                                        li
+                                            |детский дневной стационар в центре города (одноместные палаты),
+                                        li
+                                            |забор крови у детей с рождения ежедневно в течение рабочего дня,
+                                        li
+                                            |все виды УЗИ,
+                                        li
+                                            |офтальмологическое отделение и кабинет охраны детского зрения.
+                            div.company__col
+                                div.company__image-wrapper
+                                    img.company__image(src="images/media/company-image-03.jpg", alt="")         
+                    div.company__row
+                        div.company__cols
+                            div.company__col
+                                div.common__wysiwyg.company__description
+                                    h4
+                                        |Медицинская помощь взрослым в семейных клиниках «Династия»
+                                    ul
+                                        li
+                                            |Прием врачей всех взрослых специальностей,
+                                        li
+                                            |широчайший спектр лабораторной диагностики,
+                                        li
+                                            |забор крови ежедневно в течение рабочего дня,
+                                        li
+                                            |отделение функциональной диагностики,
+                                        li
+                                            |весь спектр УЗИ,
+                                        li
+                                            |отделение физиотерапии в центре города,
+                                        li
+                                            |дневной стационар в центре города (одноместные палаты).
+                            div.company__col
+                                div.company__image-wrapper
+                                    img.company__image(src="images/media/company-image-04.jpg", alt="")    
+                    div.company__branches
+                        h2.common__h2-heading.company__branches-heading
+                            |Наши отделения
+                        section.branches
+                            div.branches__tabs.js-tabs(data-tabs="branches")
+                                div.tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            button.tabs__button(data-tab="branch-01")
+                                                |ул. Мамина-Сибиряка, 128
+                                        li.tabs__item
+                                            button.tabs__button(data-tab="branch-02")
+                                                |ул. Академика Шварца, 14
+                            ul.branches__list(data-tabs-content="branches")
+                                li.branches__item(data-tab-content="branch-01")
+                                    div.branch
+                                        div.branch__top
+                                            div.branch__image-wrapper
+                                                img.branch__image(src="images/branches/branch-01.jpg", alt="")
+                                            div.branch__map-wrapper
+                                                div.branch__map.js-branch-map(data-branch="mamsib")
+                                        div.branch__bottom
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__work-hours
+                                                    p
+                                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                                span.branch__opening-sign
+                                                    |Сейчас открыто
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__description
+                                                    p
+                                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                                    p
+                                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+                                li.branches__item(data-tab-content="branch-02")
+                                    div.branch
+                                        div.branch__top
+                                            div.branch__map-wrapper
+                                                div.branch__map.js-branch-map(data-branch="akshv")
+                                        div.branch__bottom
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__work-hours
+                                                    p
+                                                        |Филиал работает ежедневно с 07:30 до 20:00
+                                                span.branch__opening-sign
+                                                    |Сейчас открыто
+                                            div.branch__col
+                                                div.common__wysiwyg.branch__description
+                                                    p
+                                                        |Клиника расположена в отдельном 4-х этажном здании на углу ул. Мамина-Сибиряка и ул. Карла Маркса, напротив Екатеринбургского Зоопарка. Вход в клинику расположен в правой части здания. Если вам необходим пандус – он находится в левой части здания.
+                                                    p
+                                                        |Забор анализов ежедневно с 07:30. Вакцинация ежедневно.
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
+
+

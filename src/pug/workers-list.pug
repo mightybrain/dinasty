@@ -1,0 +1,240 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                |Специалисты
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Специалисты
+                section.workers
+                    div.workers__filter
+                        select.js-choices.js-select-filter(data-filter="workers")
+                            option(value="all")
+                                |Все специалисты
+                            option(value="-therapist")
+                                |Терапевт
+                            option(value="-physiotherapist")
+                                |Физиотерапевт
+                            option(value="-cardiologist")
+                                |Кардиолог
+                    ul.workers__list(data-filtered-content="workers")
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-01.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Чаленко
+                                        br
+                                        |Татьяна Владимировна      
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Главный врач
+                        li.workers__item(data-filtered-item="-all -therapist -cardiologist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-02.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Масаева
+                                        br
+                                        |Анна Геннадьевна    
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Старший администратор
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-03.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Дмитриева
+                                        br
+                                        |Надежда Александровна     
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Педиатр
+                                        li.tags__item
+                                            |Гастроэнтеролог
+                        li.workers__item(data-filtered-item="-all -cardiologist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-04.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Кузьмина
+                                        br
+                                        |Светлана Евгеньевна      
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Акушер-гинеколог
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-05.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Пыхтеева
+                                        br
+                                        |Татьяна Геннадьевна     
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Акушер-гинеколог
+                                        li.tags__item
+                                            |УЗИ
+                        li.workers__item(data-filtered-item="-all -cardiologist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-06.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Ведерникова
+                                        br
+                                        |Алена Игоревна 
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Акушер-гинеколог
+                                        li.tags__item
+                                            |УЗИ
+                        li.workers__item(data-filtered-item="-all -physiotherapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-07.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Александрова
+                                        br
+                                        |Екатерина Сергеевна   
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Аллерголог-иммунолог
+                                        li.tags__item
+                                            |Инфекционист
+                                        li.tags__item
+                                            |Педиатр
+                        li.workers__item(data-filtered-item="-all -physiotherapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-08.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Сулейманова
+                                        br
+                                        |Галина Анатольевна   
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |УЗИ
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-09.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Киселева
+                                        br
+                                        |Наталья Викторовна    
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |УЗИ
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-10.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Заплатина
+                                        br
+                                        |Наталья Ивановна    
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Терапевт
+                                        li.tags__item
+                                            |Гастроэнтеролог
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-11.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Дрометр
+                                        br
+                                        |Дмитрий Александрович     
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Эндокринолог
+                                        li.tags__item
+                                            |Диетолог
+                        li.workers__item(data-filtered-item="-all -therapist")
+                            div.worker-preview
+                                div.worker-preview__image-wrapper
+                                    a.worker-preview__link(href="")
+                                        img.worker-preview__image(src="images/media/doctor-image-12.jpg", alt="")
+                                span.worker-preview__name
+                                    a.worker-preview__link(href="")
+                                        span
+                                            |Медведева
+                                        br
+                                        |Ольга Вячеславовна     
+                                div.tags.tags--centered.tags--no-border.worker-preview__tags
+                                    ul.tags__list
+                                        li.tags__item
+                                            |Отоларинголог
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
+
+

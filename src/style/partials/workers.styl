@@ -1,0 +1,143 @@
+.workers
+    width 100%
+    
+    &__filter
+        width 100%
+        max-width 628px
+        margin 0 auto 60px auto
+        @media tablet-portrait-large
+            margin 0 0 60px 0
+
+    &__list
+        display flex
+        flex-wrap wrap
+        width calc(100% + 36px)
+        margin 0 0 -45px -36px
+        padding 0
+        list-style none
+        @media tablet-portrait-small
+            width calc(100% + 20px)
+            margin 0 0 -45px -20px
+        @media phone
+            width 100%
+            margin 0 0 -45px 0
+
+    &__item
+        width calc(100% / 4 - 36px)
+        margin 0 0 45px 36px
+        @media tablet-landscape-large
+            width calc(100% / 3 - 36px)
+        @media tablet-portrait-large
+            width calc(100% / 2 - 36px)
+        @media tablet-portrait-small
+            width calc(100% / 2 - 20px)
+            margin 0 0 45px 20px
+        @media phone
+            width 100%
+            margin 0 0 45px 0
+
+.workers__item.js-content-is-hidden
+    display none
+
+.worker-preview
+    width 100%
+    text-align center
+    @media tablet-portrait-large
+        text-align left
+
+    &__image-wrapper
+        position relative
+        height 400px
+        margin 0 0 25px 0
+        border-radius 10px
+        overflow hidden
+
+    &__image
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%) scale(1)
+        display block
+        width 101%
+        height 101%
+        object-fit cover
+        transition transform .5s 0s ease
+
+        &:hover
+            transform translate(-50%, -50%) scale(1.05)
+
+    &__name
+        font-family "Spectral"
+        font-size 18px
+        line-height 22px
+        font-weight 300
+        color black
+
+        & span:first-child
+            text-transform uppercase
+
+    &__link
+        text-decoration none
+        color inherit
+
+    &__tags
+        margin 16px 0 0 0
+
+.worker
+    &__foreword
+        position relative
+        display flex
+        flex-wrap nowrap
+        justify-content space-between
+        max-width 1052px
+        margin 0 auto
+        @media tablet-portrait-large
+            flex-direction column
+
+    &__image-wrapper
+        position absolute
+        top -318px
+        right 0
+        width calc(50% - 18px)
+        height 580px
+        border-radius 10px
+        overflow hidden
+        @media tablet-portrait-large
+            position relative
+            width 100%
+            max-width 350px
+            height 400px
+            top 0
+            left 0
+            right auto
+
+    &__image
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        display block
+        width 101%
+        height 101%
+        object-fit cover
+        
+    &__tags
+        margin 0 0 43px 0
+
+    &__description
+        max-width 1052px
+        margin 93px auto 0 auto
+
+    &__question-button
+        margin 42px 0 0 0
+
+.worker__image-wrapper + .worker__info
+    width calc(50% - 18px)
+    min-height 262px
+    @media tablet-portrait-large
+        width 100%
+        min-height auto
+        margin 43px 0 0 0
+
+
+

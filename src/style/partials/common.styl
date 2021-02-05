@@ -7,6 +7,18 @@ svg circle
     stroke inherit !important
     stroke-width inherit !important
 
+.bubble-container
+    position absolute
+
+.bubble
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    border-radius 50%
+    animation bubble
+    animation-timing-function linear
+
 .common
     &__h1-heading
         margin 0
@@ -15,15 +27,43 @@ svg circle
         line-height 66px
         font-weight 300
         color black
-        @media tablet-portrait-small
+        @media tablet-portrait-large
             font-size 48px
             line-height 52px
-        @media phone
-            font-size 36px
-            line-height 40px
+        @media tablet-portrait-small
+            font-size 38px
+            line-height 42px
 
         &--white
             color white
+
+    &__h2-heading
+        margin 0
+        font-family "Spectral"
+        font-size 48px
+        line-height 52px
+        font-weight 300
+        color black
+        @media tablet-portrait-large
+            font-size 40px
+            line-height 44px
+        @media tablet-portrait-small
+            font-size 34px
+            line-height 38px
+
+    &__h3-heading
+        margin 0
+        font-family "Spectral"
+        font-size 36px
+        line-height 40px
+        font-weight 300
+        color black
+        @media tablet-portrait-large
+            font-size 30px
+            line-height 34px
+        @media tablet-portrait-small
+            font-size 28px
+            line-height 32px
 
     &__h4-heading
         margin 0
@@ -32,12 +72,12 @@ svg circle
         line-height 30px
         font-weight 300
         color black
-        @media tablet-landscape-medium
+        @media tablet-portrait-large
             font-size 22px
             line-height 26px
 
         &--white
-            color white       
+            color white        
 
     &__link
         font-family "Spectral"
@@ -54,26 +94,36 @@ svg circle
             border-bottom 1px solid transparent
 
         &--backing
+            position relative
             display inline-block
             padding 9px 25px 8px 25px
             color white
             background-color deep-pink
             border none
             border-radius 19.5px
+            overflow hidden
             transition background-color .3s 0s ease 
 
             &:hover
                 background-color bright-pink
                 border none
 
+            & .bubble-container
+                opacity .2
+
+            & .bubble
+                background-color white
+                animation-duration .4s
+
         &--large
             font-size 26px
             line-height 30px
-            @media tablet-landscape-medium
+            @media tablet-portrait-large
                 font-size 22px
-                line-height 26px
+                line-height 26px 
 
     &__button
+        position relative
         padding 9px 25px 8px 25px
         font-family "Spectral"
         font-size 18px
@@ -85,8 +135,12 @@ svg circle
         border none
         border-radius 19.5px
         outline none
+        overflow hidden
         transition background-color .3s 0s ease
         cursor pointer
+
+        &:not(.common__button--no-backing):hover
+            background-color bright-pink
 
         &--medium
             font-size 20px
@@ -99,14 +153,25 @@ svg circle
             line-height 30px
             padding 12px 30px 11px 30px
             border-radius 26.5px
-            @media tablet-landscape-medium
+            @media tablet-portrait-large
                 font-size 22px
-                line-height 26px
+                line-height 26px 
+
+        & span:not([class])
+            position relative
+
+        & .bubble-container
+            opacity .2
+
+        & .bubble
+            background-color white
+            animation-duration .4s
 
         &--no-backing
             padding 0
             color black
             background none
+            border-radius 0
             transition color .3s 0s ease
 
             & svg
@@ -132,8 +197,59 @@ svg circle
             &:hover
                 color black
                 border-bottom 1px dotted transparent
+
+    &__req-sign
+        color deep-pink
             
     &__wysiwyg
+        & h2:not([class])
+            margin 0 0 31px 0
+            font-family "Spectral"
+            font-size 48px
+            line-height 52px
+            font-weight 300
+            color black
+            @media tablet-portrait-large
+                font-size 40px
+                line-height 44px
+            @media tablet-portrait-small
+                font-size 34px
+                line-height 38px
+
+            &:not(:first-child)
+                margin 84px 0 31px 0
+
+        & h3:not([class])
+            margin 0 0 34px 0
+            font-family "Spectral"
+            font-size 36px
+            line-height 40px
+            font-weight 300
+            color black
+            @media tablet-portrait-large
+                font-size 30px
+                line-height 34px
+            @media tablet-portrait-small
+                font-size 28px
+                line-height 32px
+
+            &:not(:first-child)
+                margin 85px 0 34px 0
+
+        & h4:not([class])
+            margin 0 0 26px 0
+            font-family "Spectral"
+            font-size 26px
+            line-height 30px
+            font-weight 300
+            color black
+            @media tablet-portrait-large
+                font-size 22px
+                line-height 26px
+
+            &:not(:first-child)
+                margin 85px 0 26px 0
+
         & p:not([class])
             margin 0
             font-family "Spectral"
@@ -142,12 +258,143 @@ svg circle
             font-weight 300
             color black
 
-        & p:not([class]) + p:not([class])
-            margin 18px 0 0 0
+        & p:not([class]) + p:not([class]),
+        & ul:not([class]) + p:not([class]),
+        & ol:not([class]) + p:not([class])
+            margin 24px 0 0 0
 
-        &--white
-            & p:not([class])
+        & img:not([class]) + p:not([class]),
+        & .table-scroller + p:not([class])
+            margin 32px 0 0 0
+
+        & li:not([class])
+            position relative
+            left 35px
+            width calc(100% - 35px)
+            font-family "Spectral"
+            font-size 18px
+            line-height 26px
+            font-weight 300
+            color black
+
+        & ul:not([class])
+            margin 0
+            padding 0
+            list-style none
+
+            & li:not([class])::before
+                content ""
+                position absolute
+                top 15px
+                left -35px
+                display block
+                width 25px
+                height 1px
+                background-color deep-pink
+
+        & ul:not([class]) + ul:not([class]),
+        & ol:not([class]) + ul:not([class]),
+        & p:not([class]) + ul:not([class])
+            margin 24px 0 0 0
+
+        & img:not([class]) + ul:not([class]),
+        & .table-scroller + ul:not([class])
+            margin 32px 0 0 0
+
+        & ol:not([class])
+            margin 0
+            padding 0
+
+            & li:not([class])::marker
+                font-family "Spectral"
+                font-size 18px
+                line-height 26px
+                font-weight 300
+                color deep-pink
+
+        & ol:not([class]) + ol:not([class]),
+        & ul:not([class]) + ol:not([class]),
+        & p:not([class]) + ol:not([class])
+            margin 24px 0 0 0
+
+        & img:not([class]) + ol:not([class]),
+        & .table-scroller + ol:not([class])
+            margin 32px 0 0 0
+
+        & img:not([class])
+            display block
+            max-width 100%
+            border-radius 10px
+
+        & img:not([class]) + img:not([class]),
+        & p:not([class]) + img:not([class]),
+        & ol:not([class]) + img:not([class]),
+        & ul:not([class]) + img:not([class]), 
+        & .table-scroller + img:not([class])
+            margin 31px 0 0 0
+
+        & a:not([class])
+            font-family "Spectral"
+            font-size 18px
+            line-height 26px
+            font-weight 300
+            color deep-pink
+            text-decoration none
+            outline none
+            border-bottom 1px solid deep-pink
+            transition border .3s 0s ease 
+
+            &:hover
+                border-bottom 1px solid transparent
+
+        & .table-scroller
+            overflow-x auto
+
+        & .table-scroller + .table-scroller,
+        & p:not([class]) + .table-scroller,
+        & ol:not([class]) + .table-scroller,
+        & ul:not([class]) + .table-scroller, 
+        & img:not([class]) + .table-scroller
+            margin 31px 0 0 0
+
+        & table:not([class])
+            border-spacing 0
+            text-align left
+
+            & th:not([class])
+                box-sizing border-box
+                padding 21px 25px 
+                font-family "Spectral"
+                font-size 16px
+                line-height 20px
+                font-weight 300
                 color white
+                background-color deep-pink
 
-.common__button:not(.common__button--no-backing):hover
-    background-color bright-pink
+            & td:not([class])
+                box-sizing border-box
+                padding 20px 25px 
+                font-family "Spectral"
+                font-size 16px
+                line-height 20px
+                font-weight 300
+                color black
+                border-left 1px solid light-gray
+                border-bottom 1px solid light-gray
+
+                &:last-child
+                    border-right 1px solid light-gray
+
+            & tr:first-child
+                & th:first-child
+                    border-radius 10px 0 0 0
+
+                & th:last-child
+                    border-radius 0 10px 0 0
+
+            & tr:last-child
+                & td:first-child
+                    border-radius 0 0 0 10px
+
+                & td:last-child
+                    border-radius 0 0 10px 0

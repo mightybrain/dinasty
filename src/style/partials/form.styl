@@ -1,11 +1,82 @@
 .form
+    display flex
+    flex-direction column
+    width 100%
+    
     &--search
+        flex-direction row
+        flex-wrap nowrap
+
+    &__row
         display flex
         flex-wrap nowrap
-        align-items flex-start
+        justify-content space-between
+        width 100%
+        @media tablet-portrait-small
+            flex-direction column
+
+    &__row + &__row
+        margin 22px 0 0 0
+
+    &__cols
+        display flex
+        flex-wrap nowrap
+        justify-content space-between
+        width 100%
+        @media tablet-portrait-small
+            flex-direction column
+
+    &__col
+        display flex
+        flex-direction column
+        width calc(50% - 18px)
+        @media tablet-portrait-small
+            width 100%
+
+    &__col + &__col
+        @media tablet-portrait-small
+            margin 21px 0 0 0
 
     &__group
+        flex-grow 1
+        display flex
+        flex-direction column
         width 100%
+
+        &--checkbox
+            margin 52px 0 0 0
+
+    &__group + &__group
+        margin 21px 0 0 0
+
+    &__group + &__group--checkbox
+        margin 53px 0 0 0
+
+    &__label
+        position relative
+        margin 0 0 2px 0
+        font-family "Spectral"
+        font-size 16px
+        line-height 26px
+        font-weight 300
+        color gray
+
+        &-link
+            text-decoration none
+            color deep-pink
+            outline none
+            border-bottom 1px solid deep-pink
+            transition border .3s 0s ease 
+
+            &:hover
+                border-bottom 1px solid transparent
+
+    &__req-sign
+        font-family "Spectral"
+        font-size 20px
+        line-height 26px
+        font-weight 300
+        color deep-pink
 
     &__input
         box-sizing border-box
@@ -16,7 +87,7 @@
         line-height 28px
         font-weight 300
         color black
-        border 1px solid #e9e9e9
+        border 1px solid light-gray
         border-radius 10px
         outline none
         background-color white
@@ -32,16 +103,93 @@
             font-weight 300
             color black
 
+    &__textarea
+        flex-grow 1
+        box-sizing border-box
+        width 100%
+        padding 9px 15px 8px 15px
+        font-family "Spectral"
+        font-size 20px
+        line-height 28px
+        font-weight 300
+        color black
+        border 1px solid light-gray
+        border-radius 10px
+        outline none
+        background-color white
+        resize none
+
+    &__checkbox
+        position absolute
+        opacity 0
+        visibility hidden
+
+    &__custom-checkbox
+        position absolute
+        top -3px
+        left -36px
+        box-sizing border-box
+        width 28px
+        height 28px
+        border 1px solid light-gray
+        border-radius 10px
+        outline none
+        background-color white
+        cursor pointer
+
+    &__submit-button
+        align-self flex-start
+        margin 48px 0 0 0
+
     &__search-button
         margin 0 0 0 36px
-        @media laptop
-            margin 0 0 0 32px
         @media tablet-portrait-small
             margin 0 0 0 20px
 
 .form--search
     & .form__group
-        flex-grow 1
+        width auto
+
+.form__group--checkbox
+    & .form__label
+        left 36px
+        font-size 18px
+        color black
+
+.form__checkbox:checked + .form__custom-checkbox::before
+    content ""
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    display block
+    width 16px
+    height 12px
+    background-image url("../images/check.svg")
+    background-repeat no-repeat
+
+.form--centered
+    & .form__group--checkbox
+        align-items center
+        @media tablet-portrait-large
+            align-items flex-start
+
+        & .form__label
+            left 18px
+            @media tablet-portrait-large
+                left 36px
+                width calc(100% - 36px)
+
+    & .form__submit-button
+        align-self center
+        @media tablet-portrait-large
+            align-self flex-start
+    
+.js-valid-error
+    & .form__input,
+    & .form__textarea,
+    & .form__custom-checkbox
+        border 1px solid deep-pink
 
     
 

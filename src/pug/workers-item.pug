@@ -1,0 +1,91 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--half
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Специалисты
+                            li.breadcrumbs__item
+                                |Ведерникова Алена Игоревна
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Ведерникова Алена Игоревна
+                section.worker
+                    div.worker__foreword
+                        div.worker__image-wrapper
+                            img.worker__image(src="images/media/doctor-image-06.jpg", alt="")
+                        div.worker__info
+                            div.tags.tags--large.worker__tags
+                                ul.tags__list
+                                    li.tags__item
+                                        a.tags__link(href="")
+                                            |Акушер-гинеколог
+                                    li.tags__item
+                                        a.tags__link(href="")
+                                            |УЗИ
+                            div.common__wysiwyg.worker__foreword-description
+                                p
+                                    |Врач высшей категории. Стаж работы 17 лет.
+                                p
+                                    |Дни приема: пн, вт, чт, пт
+                    div.worker__description
+                        div.common__wysiwyg
+                            h3
+                                |Образование
+                            ul
+                                li
+                                    |Диплом УГМА по специальности «Педиатрия» от 2011 года.
+                                li
+                                    |Интернатура по акушерству и гинекологии 2011-2012 годы.
+                                li
+                                    |Профессиональная переподготовка по ультразвуковой диагностике в 2016 году. Сертификат специалиста по ультразвуковой диагностике от 2016 года.
+                                li
+                                    |Курс повышения квалификации по «Актуальным вопросам акушерско - гинекологической помощи в амбулаторно - поликлинической практике» в 2017 году. Сертификат специалиста по акушерству и гинекологии от 2017 года.
+                                li
+                                    |Обучение по технологии «Плазмолифтинг в гинекологии» в 2019 году.
+                            h3
+                                |Сфера профессиональных интересов
+                            ul
+                                li
+                                    |Консультации по заболеваниям шейки матки,
+                                li
+                                    |воспалительные заболевания женской половой сферы,
+                                li
+                                    |вопросы контрацепции и планирования беременности,
+                                li
+                                    |диагностика и лечение бесплодия,
+                                li
+                                    |лечение патологии шейки матки,
+                                li
+                                    |кольпоскопия, биопсия,
+                                li
+                                    |диатермокоагуляция, аргонно - плазменная коагуляция, конизация,
+                                li
+                                    |плазмолифтинг в гинекологии (введение аутологичной плазмы в гинекологии),
+                                li
+                                    |УЗИ в гинекологии.
+                        //button.common__button.common__button--medium.worker__question-button.js-bubble-hover
+                            |Задать вопрос врачу
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")

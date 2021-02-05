@@ -1,0 +1,174 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                |Отзывы
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Отзывы
+                section.reviews
+                    button.common__button.common__button--medium.reviews__scroll-button.js-bubble-hover.js-scroll-button(data-target="leave-review")
+                        |Оставить отзыв
+                    ul.reviews__list
+                        li.reviews__item
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |30.01.2020
+                                    span.review__author
+                                        |Кира
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс.
+                                        p
+                                            |Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен. Для меня поход в поликлинику это всегда стресс. Я нервничаю. Боязнь больницы. Был у доктора Суслова Владимира Николаевича травматолога-ортопеда. Все на высшем уровне. Я был доволен.
+                                    div.tags.review__tags
+                                        ul.tags__list
+                                            li.tags__item
+                                                a.tags__link(href="")
+                                                    |Ведерникова Алена Игоревна
+                                            li.tags__item
+                                                a.tags__link(href="")
+                                                    |УЗИ
+                                div.review__answer
+                                    div.common__wysiwyg.review__answer-description
+                                        p
+                                            |Мария, благодарим вас за отзыв и добрые слова о враче. Желаем вам здоровья и благополучия.
+                                    span.review__answer-date
+                                        |17.03.2020
+                                    span.review__answer-author
+                                        |Семейная клиника «Династика»
+                        li.reviews__item
+                            div.review
+                                div.review__info
+                                    span.review__date
+                                        |30.01.2020
+                                    span.review__author
+                                        |Ирина
+                                    div.common__wysiwyg.review__description
+                                        p
+                                            |Здравствуйте, хочу выразить огромную благодарность Ведерниковой Алене Игоревне. Наблюдалась у нее по беременности в женской консультации. Можно сказать, что это наш семейный доктор. Наблюдаюсь я, теперь уже взрослая дочка тоже.
+                                    div.tags.review__tags
+                                        ul.tags__list
+                                            li.tags__item
+                                                a.tags__link(href="")
+                                                    |Ведерникова Алена Игоревна
+                                            li.tags__item
+                                                a.tags__link(href="")
+                                                    |УЗИ
+                    div.reviews__pagination
+                        div.pagination
+                            div.pagination__arrow.pagination__arrow--disabled
+                                //a.pagination__arrow-link(href="")
+                                svg(width="12" height="21")
+                                    use(xlink:href="#arrow-left-small")
+                            span.pagination__counter
+                                span.pagination__current-page
+                                    |1
+                                span.pagination__last-page
+                                    |99
+                            ul.pagination__list
+                                li.pagination__item.pagination__item--active
+                                    |1
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |2
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |3
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |4
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |5
+                                li.pagination__item
+                                    |...
+                                li.pagination__item
+                                    a.pagination__link(href="")
+                                        |99
+                            div.pagination__arrow
+                                a.pagination__arrow-link(href="")
+                                    svg(width="12" height="21")
+                                        use(xlink:href="#arrow-right-small")
+                    div.reviews__leave-review(data-anchor="leave-review")
+                        section.leave-review
+                            h2.common__h2-heading.leave-review__heading
+                                |Оставить отзыв
+                            div.common__wysiwyg.leave-review__description
+                                p
+                                    |Обратите внимание, поля со звездочкой 
+                                    span.common__req-sign
+                                        |* 
+                                    |– обязательны для заполнения.
+                            form.form.form--centered
+                                div.form__row
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |ФИО
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="name" data-req)
+                                        div.form__group
+                                            label.form__label
+                                                |Телефон
+                                                span.form__req-sign
+                                                    |*
+                                            input.form__input(type="text" data-content="phone" data-req)
+                                        div.form__group
+                                            label.form__label
+                                                |Цель обращения к врачу
+                                            input.form__input(type="text")
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Текст отзыва
+                                                span.form__req-sign
+                                                    |*
+                                            textarea.form__textarea(name="" data-type="textarea" data-req)
+                                div.form__row
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Достоинства
+                                            textarea.form__textarea(name="" data-type="textarea")
+                                    div.form__col
+                                        div.form__group
+                                            label.form__label
+                                                |Недостатки
+                                            textarea.form__textarea(name="" data-type="textarea")
+                                div.form__group.form__group--checkbox
+                                    label.form__label
+                                        input.form__checkbox(type="checkbox" data-req)
+                                        div.form__custom-checkbox
+                                        |Согласен на обработку 
+                                        a.form__label-link(href="")
+                                            |персональных данных
+                                button.common__button.common__button--medium.form__submit-button.js-bubble-hover(type="submit")
+                                    span
+                                        |Отправить отзыв
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")

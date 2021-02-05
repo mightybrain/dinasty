@@ -1,0 +1,323 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1")
+        link(rel="stylesheet" href="style/normalize.css" type="text/css")
+        link(rel="stylesheet" href="style/swiper.css" type="text/css")
+        link(rel="stylesheet" href="style/choices.css" type="text/css")
+        link(rel="stylesheet" href="style/main.css" type="text/css")
+        title Династия
+    body
+        div(style="display: none")
+            include ../../build/images/sprite.svg
+        //= partials/header.pug
+        main.main
+            div.container
+                section.inner-intro.inner-intro--centered
+                    div.breadcrumbs.inner-intro__breadcrumbs
+                        ul.breadcrumbs__list
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="")
+                                    |Главная
+                            li.breadcrumbs__item
+                                |Услуги и цены
+                    div.inner-intro__heading-wrapper
+                        h1.common__h1-heading.inner-intro__heading
+                            |Услуги и цены
+                section.areas
+                    div.areas__tabs.js-tabs(data-tabs="areas")
+                        div.tabs
+                            ul.tabs__list
+                                li.tabs__item
+                                    button.tabs__button.js-active-tab(data-tab="grown")
+                                        |Взрослое отделение
+                                li.tabs__item
+                                    button.tabs__button(data-tab="child")
+                                        |Детское отделение      
+                    div.areas__container(data-tabs-content="areas")
+                        ul.areas__list(data-tab-content="grown")
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-08.svg", alt="")
+                                a.areas__link(href="")
+                                    |Аллерголог-иммунолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-05.svg", alt="")
+                                a.areas__link(href="")
+                                    |Акушер-гинеколог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-19.svg", alt="")
+                                a.areas__link(href="")
+                                    |Гастроэнтеролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-01.svg", alt="")
+                                a.areas__link(href="")
+                                    |Дерматовенеролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-06.svg", alt="")
+                                a.areas__link(href="")
+                                    |Диетолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-09.svg", alt="")
+                                a.areas__link(href="")
+                                    |Инфекционист
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-24.svg", alt="")
+                                a.areas__link(href="")
+                                    |Кардиолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-14.svg", alt="")
+                                a.areas__link(href="")
+                                    |Клинический психолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-03.svg", alt="")
+                                a.areas__link(href="")
+                                    |Колопроктолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-27.svg", alt="")
+                                a.areas__link(href="")
+                                    |Лаборатория
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-15.svg", alt="")
+                                a.areas__link(href="")
+                                    |ЛОР (Отоларинголог)
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-25.svg", alt="")
+                                a.areas__link(href="")
+                                    |Маммолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-35.svg", alt="")
+                                a.areas__link(href="")
+                                    |Мануальный терапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-23.svg", alt="")
+                                a.areas__link(href="")
+                                    |Массажист
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-16.svg", alt="")
+                                a.areas__link(href="")
+                                    |Невролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-34.svg", alt="")
+                                a.areas__link(href="")
+                                    |Нефролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-28.svg", alt="")
+                                a.areas__link(href="")
+                                    |Онколог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-20.svg", alt="")
+                                a.areas__link(href="")
+                                    |Остеопат
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-22.svg", alt="")
+                                a.areas__link(href="")
+                                    |Офтальмолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-10.svg", alt="")
+                                a.areas__link(href="")
+                                    |Психиатр
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-11.svg", alt="")
+                                a.areas__link(href="")
+                                    |Процедурный кабинет
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-33.svg", alt="")
+                                a.areas__link(href="")
+                                    |Пульмонолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-17.svg", alt="")
+                                a.areas__link(href="")
+                                    |Ревматолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-26.svg", alt="")
+                                a.areas__link(href="")
+                                    |Рефлексотерапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-30.svg", alt="")
+                                a.areas__link(href="")
+                                    |Сердечно-сосудистый хирург
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-18.svg", alt="")
+                                a.areas__link(href="")
+                                    |Справки и сертификаты
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-29.svg", alt="")
+                                a.areas__link(href="")
+                                    |Терапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-32.svg", alt="")
+                                a.areas__link(href="")
+                                    |Травматолог-ортопед
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-13.svg", alt="")
+                                a.areas__link(href="")
+                                    |УЗИ
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-02.svg", alt="")
+                                a.areas__link(href="")
+                                    |Услуги на дому
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-04.svg", alt="")
+                                a.areas__link(href="")
+                                    |Уролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-21.svg", alt="")
+                                a.areas__link(href="")
+                                    |Физиотерапия
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-07.svg", alt="")
+                                a.areas__link(href="")
+                                    |Функциональная диагностика
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-12.svg", alt="")
+                                a.areas__link(href="")
+                                    |Хирург
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-31.svg", alt="")
+                                a.areas__link(href="")
+                                    |Эндокринолог
+                        ul.areas__list(data-tab-content="child")
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-05.svg", alt="")
+                                a.areas__link(href="")
+                                    |Акушер-гинеколог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-08.svg", alt="")
+                                a.areas__link(href="")
+                                    |Аллерголог-иммунолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-19.svg", alt="")
+                                a.areas__link(href="")
+                                    |Гастроэнтеролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-01.svg", alt="")
+                                a.areas__link(href="")
+                                    |Дерматовенеролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-06.svg", alt="")
+                                a.areas__link(href="")
+                                    |Диетолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-09.svg", alt="")
+                                a.areas__link(href="")
+                                    |Инфекционист
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-24.svg", alt="")
+                                a.areas__link(href="")
+                                    |Кардиолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-14.svg", alt="")
+                                a.areas__link(href="")
+                                    |Клинический психолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-03.svg", alt="")
+                                a.areas__link(href="")
+                                    |Колопроктолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-27.svg", alt="")
+                                a.areas__link(href="")
+                                    |Лаборатория
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-15.svg", alt="")
+                                a.areas__link(href="")
+                                    |ЛОР (Отоларинголог)
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-35.svg", alt="")
+                                a.areas__link(href="")
+                                    |Мануальный терапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-23.svg", alt="")
+                                a.areas__link(href="")
+                                    |Массажист
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-16.svg", alt="")
+                                a.areas__link(href="")
+                                    |Невролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-34.svg", alt="")
+                                a.areas__link(href="")
+                                    |Нефролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-28.svg", alt="")
+                                a.areas__link(href="")
+                                    |Онколог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-20.svg", alt="")
+                                a.areas__link(href="")
+                                    |Остеопат
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-22.svg", alt="")
+                                a.areas__link(href="")
+                                    |Офтальмолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-10.svg", alt="")
+                                a.areas__link(href="")
+                                    |Психиатр
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-11.svg", alt="")
+                                a.areas__link(href="")
+                                    |Процедурный кабинет
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-33.svg", alt="")
+                                a.areas__link(href="")
+                                    |Пульмонолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-17.svg", alt="")
+                                a.areas__link(href="")
+                                    |Ревматолог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-26.svg", alt="")
+                                a.areas__link(href="")
+                                    |Рефлексотерапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-30.svg", alt="")
+                                a.areas__link(href="")
+                                    |Сердечно-сосудистый хирург
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-18.svg", alt="")
+                                a.areas__link(href="")
+                                    |Справки и сертификаты
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-29.svg", alt="")
+                                a.areas__link(href="")
+                                    |Терапевт
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-32.svg", alt="")
+                                a.areas__link(href="")
+                                    |Травматолог-ортопед
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-13.svg", alt="")
+                                a.areas__link(href="")
+                                    |УЗИ
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-02.svg", alt="")
+                                a.areas__link(href="")
+                                    |Услуги на дому
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-04.svg", alt="")
+                                a.areas__link(href="")
+                                    |Уролог
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-21.svg", alt="")
+                                a.areas__link(href="")
+                                    |Физиотерапия
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-07.svg", alt="")
+                                a.areas__link(href="")
+                                    |Функциональная диагностика
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-12.svg", alt="")
+                                a.areas__link(href="")
+                                    |Хирург
+                            li.areas__item.js-bubble-hover
+                                img.areas__icon(src="images/areas/area-icon-31.svg", alt="")
+                                a.areas__link(href="")
+                                    |Эндокринолог                         
+        //= partials/footer.pug
+        // partials/popup.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="script/vendor.js" type="text/javascript")
+        script(src="script/script.js")
+
+
