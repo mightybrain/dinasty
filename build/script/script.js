@@ -164,6 +164,14 @@ if(document.querySelector(".js-burger")){
 
 // Инициализация Яндекс-карты
 // Инициализация карты Яндекс
+let maps = [];
+
+function updateMaps() {
+    maps.forEach(function(map){
+        map.container.fitToViewport();
+    })
+}
+
 let branches = {
     mamsib: [56.831886, 60.620480],
     akshv: [56.795475, 60.624631]
@@ -177,6 +185,17 @@ if(document.querySelector(".js-branch-map")){
                 mapInit(branches[item.getAttribute("data-branch")], item)
             }
         })
+
+        // Observer
+        const target = document.querySelector("[data-tabs=branches]");
+        const config = {
+            attributes: true,
+        }
+
+        if(target){
+            const observer = new MutationObserver(updateMaps);
+            observer.observe(target, config);
+        }
         
     })
 }
@@ -200,6 +219,8 @@ function mapInit(arr, elem){
             iconImageOffset: [-16, -37]
         })
     )
+
+    maps.push(map);
 }
 
 
@@ -234,16 +255,20 @@ class Tabs{
     }
 
     changeState(){
-        
+
         let activeTab = this.container.querySelector(".js-active-tab");
+
         this.content.querySelectorAll("[data-tab-content]").forEach(function(item){
 
             if(item.getAttribute("data-tab-content").includes(activeTab.getAttribute("data-tab"))){ 
                 item.classList.remove("js-content-is-hidden");
             }else{
                 item.classList.add("js-content-is-hidden");
+
             }
         })
+
+        this.container.setAttribute("active-tab", activeTab.getAttribute("data-tab"));
     }
 }
 

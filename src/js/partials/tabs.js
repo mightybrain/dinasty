@@ -28,16 +28,20 @@ class Tabs{
     }
 
     changeState(){
-        
+
         let activeTab = this.container.querySelector(".js-active-tab");
+
         this.content.querySelectorAll("[data-tab-content]").forEach(function(item){
 
             if(item.getAttribute("data-tab-content").includes(activeTab.getAttribute("data-tab"))){ 
                 item.classList.remove("js-content-is-hidden");
             }else{
                 item.classList.add("js-content-is-hidden");
+
             }
         })
+
+        this.container.setAttribute("active-tab", activeTab.getAttribute("data-tab"));
     }
 }
 

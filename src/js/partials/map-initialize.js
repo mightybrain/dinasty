@@ -1,4 +1,12 @@
 // Инициализация карты Яндекс
+let maps = [];
+
+function updateMaps() {
+    maps.forEach(function(map){
+        map.container.fitToViewport();
+    })
+}
+
 let branches = {
     mamsib: [56.831886, 60.620480],
     akshv: [56.795475, 60.624631]
@@ -12,6 +20,17 @@ if(document.querySelector(".js-branch-map")){
                 mapInit(branches[item.getAttribute("data-branch")], item)
             }
         })
+
+        // Observer
+        const target = document.querySelector("[data-tabs=branches]");
+        const config = {
+            attributes: true,
+        }
+
+        if(target){
+            const observer = new MutationObserver(updateMaps);
+            observer.observe(target, config);
+        }
         
     })
 }
@@ -35,4 +54,6 @@ function mapInit(arr, elem){
             iconImageOffset: [-16, -37]
         })
     )
+
+    maps.push(map);
 }   
